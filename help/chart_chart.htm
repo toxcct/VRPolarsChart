@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title>Help | Chart App | Chart</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="description"	lang="en" content="Toxcct's Polars Help">
+	<meta name="abstract"		lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore">
+	<meta name="title"			lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore Races">
+	<meta name="author"			lang="en" content="toxcct">
+	<meta name="keywords"		content="toxcct, Polars, Chart, Virtual, Regatta, Offshore, Boat, Race, Races, Zezo">
+	<meta name="robots"			content="all">
+	<meta name="rating"			content="General">
+	<meta name="category"		content="Sport">
+	<meta name="publisher"		content="Toxcct">
+	<meta name="copyright"		content="Toxcct 2018">
+ 	<meta name="viewport"		content="width=device-width, initial-scale=1">
+ 	<link rel="icon"			type="image/png" href="../favicon-help.png" />
+	<link rel="stylesheet"		type="text/css"	 href="../css/general.css?v=5.3.11"	media="screen" />
+	<link rel="stylesheet"		type="text/css"	 href="../css/help.css?v=5.3.11"	media="screen" />
+	<script type="text/javascript" src="../js/lib/jquery-3.2.1.min.js"				defer ></script>
+	<script type="text/javascript" src="../js/help.js?v=5.3.11"						defer ></script>
+	<script type="text/javascript" src="../js/lib/gtag.js?v=5.3.11"					defer ></script>
+</head>
+
+<body>
+	<header id="_top"></header>
+	<article class="grid2cols">
+		<div class="column1">
+			<div class="sticky">
+				<div class="sidebox grid1cols">
+					<span><a href="./">&loarr; Back to Summary</a></span>
+				</div>
+				<div class="sidebox grid1cols" id="toc"></div>
+			</div>
+		</div>
+
+		<div class="column2">
+			<div class="contentframe">
+				<h1>Polars Chart</h1>
+				<h3>Chart</h3>
+			</div>
+
+			<div class="contentframe">
+				<p>A Polars Chart is generally represented in a semi-circle Scale (180°).
+					This is because modern boats have symmetrical performances,
+					thus behaving similarly whether the wind comes from port side (left) or from starboard (right).</p>
+			</div>
+
+			<div class="contentframe" id="_scale">
+				<h5>The Scale</h5>
+				<p><img src="img/130.png" class="flt_right"></p>
+				<p>A polar scale is built upon 2 dimensions:</p>
+				<p>The <b>angle</b> must be read from the top (0°) to the bottom (180°), and represents the
+					<a href="definitions.htm#_twa" class="innerlnk">TWA</a>.</p>
+				<p>The <b>distance to the center</b> represents the <a href="definitions.htm#_boatspeed" class="innerlnk">Boat Speed</a>.</p>
+				<p>&nbsp;</p>
+				<p class="gray">On the example beside, the angle is <b><i>35°</i></b>, and the corresponding boat speed equals <b><i>6.02 kts</i></b>.</p>
+				<p>&nbsp;</p>
+				<p>The Boat Speed axis might rescale if the plotted curve becomes too narrow or too large as the
+					<a href="definitions.htm#_tws" class="innerlnk">TWS</a> varies.</p>
+				<p></p>
+			</div>
+
+			<div class="contentframe" id="_curve">
+				<h5>The Curve</h5>
+				<p><img src="img/131.png" class="flt_right"></p>
+				<p>The curve is a summary of the best speed at every angle.</p>
+				<p>Each color represents the sail producing the best speed for a given angle and for the TWS provided in the
+					<a href="chart_rightpanels.htm#_tws" class="innerlnk">input field</a>.</p>
+				<p>The best sail for a given angle is also displayed in the <a href="chart_rightpanels.htm#_sails" class="innerlnk">Sails panel</a>
+					where the bold line has the same color.</p>
+				<p class="clear">It is possible to draw one curve per sail by checking the <i>Plot Full Sails Curves</i> option on the <a href="chart_rightpanels.htm#_sails" class="innerlnk">Sails</a>
+					side panel.</p>
+			</div>
+
+			<div class="contentframe" id="_bestvmg">
+				<h5>Best VMG</h5>
+				<p><img src="img/132.png" class="flt_right"></p>
+				<p>Please read <a href="definitions.htm#_vmg" class="innerlnk">this section</a> first if you don't know what the VMG is.</p>
+				<p>The VMG can be visually represented on the chart thanks to the <i>VMG Projection to Axis</i> in the
+					<a href="chart_rightpanels.htm#_attitude" class="innerlnk">Attitude panel</a>.</p>
+				<p>The VMG projection option will draw a red dotted horizontal line, showing the effective amount of speed pushing the boat in
+					the wind direction.</p>
+				<p>At the two angles where VMG is best (upwind or downwind), a red dashed line represents the Best VMG.<br/>
+					Also, the portion of the Chart between <i>0°</i> and <i>Best upwind VMG</i> on one side, and <i>Best downwind VMG</i> and <i>180°</i>
+					on the other side, are fulfilled in pale red because they are almost never a good idea to sail
+					at those angles.</p>
+				<p class="gray">On the example beside:<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">(1)</span> is the VMG Projection,<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">(2)</span> is the underperforming zone below Best VMG,<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">(3)</span> is the Best Upwind VMG angle.</p>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

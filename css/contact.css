@@ -1,0 +1,47 @@
+/***
+ * contact.css: Polars' Help specific styles
+ * (c) 2017-2018 Toxcct
+ * ---
+ * This stylesheet is cascaded after general.css
+ ***/
+
+
+/**** GLOBAL ********/
+.sticky			{position:sticky; top:5px;}
+
+
+/**** HEADER ********/
+
+
+/**** NAV ***********/
+
+
+/**** FOOTER ********/
+
+
+/**** CONTENT *******/
+article						{width:940px; grid-template-columns:1fr 740px !important;}
+
+.contentframe				{min-height:initial !important; margin-bottom:20px; padding:10px; text-align:left;}
+.contentframe h1			{font-weight:bold; text-align:center; font-size:1.6em; color:#008275; padding:0 0 5px; line-height:1em;}
+.contentframe h3			{font-weight:normal; text-align:center; font-size:1.2em; color:#008275; padding:5px 0;}
+
+form						{display:grid; grid-template-columns:120px 1fr; grid-gap:7px;}
+form .space					{grid-column:span 2; height:20px;}
+form .error					{color:red; justify-self:center; height:inherit; padding:3.5px;}
+
+form label					{align-self:center; justify-self:end;}
+form label::after			{content:" : ";}
+form .mandatory::after		{content:"*"; color:red; font-weight:bold;}
+
+form select					{height:20px; width:252px;}
+form input[type="text"]		{height:16px; width:250px; border:1px solid #a9a9a9;}
+form #frm_subject			{width:auto;}
+form textarea				{height:200px;}
+form input[type="submit"]	{width:150px; height:33px; grid-column:span 2; justify-self:end;}
+
+form .red_out				{border-color:#941700b8 !important; box-shadow:0 0 5px 0 #b93307b3;}
+form .green_out				{border-color:#008800c4 !important; box-shadow:0 0 5px 0 #02b502b5;}
+
+form *[readonly],
+form *[disabled]			{background-color:#ebebe4; color:gray;}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title>Help | How to retrieve raw polar data</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="description"	lang="en" content="Toxcct's Polars How To">
+	<meta name="abstract"		lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore">
+	<meta name="title"			lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore Races">
+	<meta name="author"			lang="en" content="toxcct">
+	<meta name="keywords"		content="toxcct, Polars, Chart, Virtual, Regatta, Offshore, Boat, Race, Races, Zezo">
+	<meta name="robots"			content="all">
+	<meta name="rating"			content="General">
+	<meta name="category"		content="Sport">
+	<meta name="publisher"		content="Toxcct">
+	<meta name="copyright"		content="Toxcct 2018">
+ 	<meta name="viewport"		content="width=device-width, initial-scale=1">
+ 	<link rel="icon"			type="image/png" href="../favicon-help.png" />
+	<link rel="stylesheet"		type="text/css"	 href="../css/general.css?v=5.3.11"	media="screen" />
+	<link rel="stylesheet"		type="text/css"	 href="../css/help.css?v=5.3.11"	media="screen" />
+	<script type="text/javascript" src="../js/lib/jquery-3.2.1.min.js"				defer ></script>
+	<script type="text/javascript" src="../js/help.js?v=5.3.11"						defer ></script>
+	<script type="text/javascript" src="../js/lib/gtag.js?v=5.3.11"					defer ></script>
+</head>
+
+<body>
+	<header id="_top"></header>
+	<article class="grid2cols">
+		<div class="column1">
+			<div class="sticky">
+				<div class="sidebox grid1cols">
+					<span><a href="./">&loarr; Back to Summary</a></span>
+				</div>
+				<div class="sidebox grid1cols" id="toc"></div>
+			</div>
+		</div>
+
+		<div class="column2">
+			<div class="contentframe">
+				<h1>How To Retrieve Raw Polar Data</h1>
+			</div>
+
+			<div class="contentframe" id="">
+				<p>If you read this section, you are most probably a user of the Polars Applications, curious about where the raw data used come from.</p>
+				<p>You will find below the steps explaining how to do this.</p>
+				<p>Stay tuned.</p>
+			</div>
+
+			<div class="contentframe" id="_prerequisites">
+				<h5>Prerequisites</h5>
+				<p>In this documentation, I will be using the <b>Google Chrome Extension</b>
+					<a href="https://chrome.google.com/webstore/detail/vr-dashboard/amknkhejaogpekncjekiaolgldbejjan" target="_blank" rel="noopener">VR Dashboard</a> (by <i>Mak08</i>).</p>
+				<p>It is not mandatory to use Google Chrome, nor is it to use that extension.<br/>
+					However, things change a bit from one browser to another, and you need to know what you are doing to do it manually. Also, I tend
+					to explain these steps with the most used browser out there.<br/>
+					This tutorial cover a very particular need, and you mostly won't need to do these as the <a href="csvgen_input.htm#_boatselection" class="innerlnk">CSV Generator</a>
+					already provide the polars extracted from Virtual&nbsp;Regatta&trade; and used on the <a href="../">Polars Chart Application</a>.<br/>
+					This is why I will not cover the usage of other browsers and other methods to retrieve such data.</p>
+			</div>
+
+			<div class="contentframe" id="_start_ext">
+				<h5>Start the Extension</h5>
+				<p>To launch the Extension, you must start the Game in a tab, and that tab must have the focus (otherwise, the extension icon will be dimmed):</p>
+				<p><img src="img/300.png"></p>
+				<p>Once the <b class="red">Z</b> Icon is clicked, a new tab opens with the Dashboard.</p>
+				<p>To be able to intercept data exchanged between the Game tab and its server, the Dashboard needs to be executed with the <b>Debugging Mode</b>.
+					This mode is activated automatically; you won't have to do anything.<br/>
+					However, Google Chrome will notify you about it by adding a notification banner on top of every pages.</p>
+				<p><img src="img/301.png"></p>
+				<p>The following actions will prevent VR Dashboard to work properly:</p>
+				<ul><li>Hitting the <i>Cancel</i> button on the Debug notification banner (on any page),</li>
+					<li>Closing the Game tab,</li>
+					<li>Closing the Dashboard tab.</li></ul>
+				<p>&nbsp;</p>
+				<p>Once the Dashboard is opened, you can activate the "log Messages" option in the <b>RAW LOG</b> tab:</p>
+				<p><img src="img/302.png"></p>
+				<p>At anytime, you can purge the logs stack before getting new data with the Clear log button.</p>
+			</div>
+
+			<div class="contentframe" id="_start_race">
+				<h5>Open a Race</h5>
+				<p>Now, you need to click a race thumbnail on the game interface to start loading the related polars.</p>
+				<p>It may happen sometimes that the race you try to enter is not yet known by the Dashboard.
+					Don't worry, this only occurs when a new race opens and is not yet started.</p>
+				<p>It may happen also that a new tab opens with the Zezo router. You can ignore this at the moment,
+					and set the focus back on the game interface until it fully loads.</p>
+			</div>
+
+			<div class="contentframe" id="_get_logs">
+				<h5>Get your Logs</h5>
+				<p>You will see multiple logs appearing on the Dashboard then, and you will have to search for a <i>LogEventRequest</i> on the eventKey
+					<i>Meta_GetPolar</i>.</p>
+				<p>Here, I'm entering the <i>Atlantic Record</i> race:</p>
+				<p><img src="img/303.png"></p>
+				<p>The formatted Request message looks like this (ignore the prepended chevrons '&gt;&gt;&gt;' which are added by the
+					Dashboard and are not part of the message itself):</p>
+<pre class="json">{
+    <span class="key">"@class"</span>:<span class="val str">".LogEventRequest"</span>,
+    <span class="key">"eventKey"</span>:<span class="val str">"Meta_GetPolar"</span>,
+    <span class="key">"polar_id"</span>:<span class="val num">9</span>,
+    <span class="key">"requestId"</span>:<span class="val str">"<b class="highlight">636673613018600000_13</b>"</span>
+}</pre>
+				<p>&nbsp;</p>
+				<p>Grab the related <i>requestId</i>, and search the appropriate <i>LogEventResponse</i> message:</p>
+				<p><img src="img/304.png"></p>
+				<p>&nbsp;</p>
+				<p>You can now copy the entiere Response message (a triple click on the line will do it you use Windows) and feed the CSV Generator.</p>
+				<p>Remember to remove the prepended chevrons here too, otherwise, you will get an error while Reading the input in the Generator:</p>
+				<p><img src="img/305.png"></p>
+				<p>&nbsp;</p>
+				<p class="right">Voilà ;-)</p>
+				<p>&nbsp;</p>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title>Help | Chart App | Left Panels</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="description"	lang="en" content="Toxcct's Polars Help">
+	<meta name="abstract"		lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore">
+	<meta name="title"			lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore Races">
+	<meta name="author"			lang="en" content="toxcct">
+	<meta name="keywords"		content="toxcct, Polars, Chart, Virtual, Regatta, Offshore, Boat, Race, Races, Zezo">
+	<meta name="robots"			content="all">
+	<meta name="rating"			content="General">
+	<meta name="category"		content="Sport">
+	<meta name="publisher"		content="Toxcct">
+	<meta name="copyright"		content="Toxcct 2018">
+ 	<meta name="viewport"		content="width=device-width, initial-scale=1">
+ 	<link rel="icon"			type="image/png" href="../favicon-help.png" />
+	<link rel="stylesheet"		type="text/css"	 href="../css/general.css?v=5.3.11"	media="screen" />
+	<link rel="stylesheet"		type="text/css"	 href="../css/help.css?v=5.3.11"	media="screen" />
+	<script type="text/javascript" src="../js/lib/jquery-3.2.1.min.js"				defer ></script>
+	<script type="text/javascript" src="../js/help.js?v=5.3.11"						defer ></script>
+	<script type="text/javascript" src="../js/lib/gtag.js?v=5.3.11"					defer ></script>
+</head>
+
+<body>
+	<header id="_top"></header>
+	<article class="grid2cols">
+		<div class="column1">
+			<div class="sticky">
+				<div class="sidebox grid1cols">
+					<span><a href="./">&loarr; Back to Summary</a></span>
+				</div>
+				<div class="sidebox grid1cols" id="toc"></div>
+			</div>
+		</div>
+
+		<div class="column2">
+			<div class="contentframe">
+				<h1>Polars Chart</h1>
+				<h3>Left Hand Side Panels</h3>
+			</div>
+
+			<div class="contentframe" id="_race_name">
+				<h5>Race Name</h5>
+				<p><img src="img/120.png" class="flt_right"></p>
+				<p>This panel contains the full name of the race selected.<br/>
+					It also contains the following contextual action button:</p>
+				<p><img src="../css/img/bullet_delete.png" class="inline"> Archive this race<br/>
+					<i class="gray">Moves the race into the <a href="chart_raceselector.htm#_archived" class="innerlnk">Races archived</a>.<br/>
+						Available only for races in progress.</i></p>
+				<p><img src="../css/img/bullet_add.png" class="inline"> Restore this race<br/>
+					<i class="gray">Moves the race into main list.<br/>
+						Available only for races still in progress which were previously archived.</i></p>
+				<p><img src="../css/img/link.png" class="inline"> Get Permalink<br/>
+					<i class="gray">Transforms the Page URL in the address bar to reveal permalink.</i></p>
+				<p><img src="../css/img/map.png" class="inline"> Show Map<br/>
+					<i class="gray">Opens a map showing the starting and ending points.</i></p>
+			</div>
+
+			<div class="contentframe" id="_race_route">
+				<h5>Route</h5>
+				<p><img src="img/121.png" class="flt_right"></p>
+				<p>This panel shows the starting and ending points of the race.</p>
+				<p>The GPS coordinates are gathered from the race setup sent by Virtual&nbsp;Regatta&trade;.</p>
+				<p>Also, no intermediate gates/buoys are displayed here.<br/>
+					This is why, on races where starting and ending in the same place, the display may be dull.</p>
+			</div>
+
+			<div class="contentframe" id="_boat_type">
+				<h5>Boat Type</h5>
+				<p><img src="img/122.png" class="flt_right"></p>
+				<p>This panel shows the type of the boat used in this race.</p>
+				<p>Each boat have specific performances profiles.<br/>
+					This includes intrinsic polars charts, sails and options sets, which may vary from one boat to another.</p>
+				<p>Providing the boat type here is only informative, but useful for those willing to use an
+					external router, and use proper polar data.<br/>
+					In this regard, you might want to use the dedicated <a href="./#_csv_generator" class="innerlnk">CSV Generator</a> application.</p>
+			</div>
+
+			<div class="contentframe" id="_countdown">
+				<h5>Countdown</h5>
+				<p><img src="img/123.png" class="flt_right"></p>
+				<p>This panel shows the time remaining to the incoming event on the race selected.</p>
+				<p>When a race is not yet started, the start time is displayed and the countdown updates
+					every second until the start time is reached.</p>
+				<p>Incoming races are colored in "<span class="race_incoming">blue</span>", according to the
+					color code used in the <a href="chart_raceselector.htm#_colors" class="innerlnk">Race Selector</a>.</p>
+				<p><img src="img/124.png" class="flt_right"></p>
+				<p>When a race is in progress, the countdown shows the end time, and the counts only the amount of days
+					remaining until the race closes.</p>
+				<p>Races in progress are colored in "<span class="race_inprogress">green</span>" (<i>in progress</i>) or
+					"<span class="race_closing">dark red</span>" (<i>about to close within 2 days</i>).</p>
+				<p>A closed race has no countdown anymore, which is replaced by the message "No information to
+					display right now".</p>
+			</div>
+
+			<div class="contentframe" id="_get_polars">
+				<h5>Get Polars</h5>
+				<p><img src="img/125.png" class="flt_right"></p>
+				<p>This panel lets you access the <a href="./#_csv_generator" class="innerlnk">CSV Generator</a> application
+					to build your own polars data that will be useable in your favorite external router.</p>
+				<p class="gray">This panel used to have 2 deprecated download links providing direct access to <code>ZIP</code>
+					archives containing <code>CSV</code>/<code>POL</code> files for each sail.<br/>
+					These links have been removed as all they were doing is now possible to obtain using the
+					<a href="./#_csv_generator" class="innerlnk">CSV Generator</a>.</p>
+			</div>
+
+			<div class="contentframe" id="_internal_lnks">
+				<h5>Menu</h5>
+				<p><img src="img/126.png" class="flt_right"></p>
+				<p>This panel simply provides useful links related to the Polars Apps.</p>
+				<p><b>Useful to you...</b> because this is where you will find help if needed.<br/>
+					It is also where you may discover hidden features that you didn't know about so far...</p>
+				<p><b>Useful to me... </b>because if you find my work valuable, it is where you can express your
+					gratefulness.<br/>
+					Any help of any kind is well appreciated though.</p>
+				<hr/>
+				<p>This being said, use this Section as a Wiki for any questions related to a part or another of the Polars applications.</p>
+				<p>If you still don't find a relevant answer that fits your need, then you can use the contact form.<br/>
+					You are requested to provide as much information as possible if you are reporting a Bug or requesting for a new Feature.<br/>
+					Also, make sure to provide a valid email address so I can contact you back if need be.</p>
+				<p>Irrelevant Emails containing unrelated materials, spam, insults or any other off-topic stuff will be simply ignored.</p>
+			</div>
+
+			<div class="contentframe" id="_external_lnks">
+				<h5>Partners</h5>
+				<p><img src="img/127.png" class="flt_right"></p>
+				<p>This panel provides links to other useful applications in the Virtual&nbsp;Regatta&trade; ecosystem.</p>
+				<p><img src="http://zezo.org/favicon.ico" class="inline">
+					<a href="http://zezo.org/" target="_blank" rel="noopener">Zezo.org</a><br/>
+					<i class="gray">The best free router out there.</i></p>
+				<p><img src="https://lh3.googleusercontent.com/2yTMNQYOVCjJmH24RKw0IzHLn2s8ThqNqshqYa5LpwlR2w_ZX2c3izU-znmJ2lO4NVhhf-WaPA=w26-h26-e365" class="inline">
+					<a href="https://chrome.google.com/webstore/detail/vr-dashboard/amknkhejaogpekncjekiaolgldbejjan" target="_blank" rel="noopener">VR Dashboard</a><br/>
+					<i class="gray">This Chrome Extension monitors data exchanges between the VR Game UI (Client) and VR Servers, and provides a HUD Dashboard
+						connected with Zezo.org Router, WindInfo and Toxcct's Polars.</i></p>
+				<p><img src="https://lh3.googleusercontent.com/owJ7_tU9Idot401rAAADIPiD4rqsxP-yQSEp-anScjDPTLzDy7CGyqJNcQPKnMN-X1IWFTiOwaw=w26-h26-e365" class="inline">
+					<a href="https://chrome.google.com/webstore/detail/route-zezoorg/hfmdbddgjlicmflejkkoafbkdgnfggbg" target="_blank" rel="noopener">Route zezo.org (MultiRaces)</a><br/>
+					<i class="gray">This Chrome Extension extracts the path suggested by Zezo.org Router, and translates it into a textual/tabular output.<br/>
+						This extension is intended to be used in a multiraces context, thus can only be launched when having a Zezo.org tab focused.</i></p>
+				<p><img src="https://lh3.googleusercontent.com/Bvvxxs5BAVP6OnljNc1TD-x7iTZdts4PqrdjVQVm-UjCUC-JhB7RBV4c5cZJ97Z93mjM4_jY6Q=w26-h26-e365" class="inline">
+					<a href="https://chrome.google.com/webstore/detail/route-zezoorg/dcgkemofanbgjhnbmjjfomcgdkmobhgi" target="_blank" rel="noopener">Route zezo.org (MonoRace)</a><br/>
+					<i class="gray">This Chrome Extension extracts the path suggested by Zezo.org Router, and translates it into a textual/tabular output.<br/>
+						Unlike the multirace extension above, this extension is intended to be used in a single race context. That means that you can open the latest
+						path table gathered from any tab focused, but don't get mistaken if you are routing several races at the same time.</i></p>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

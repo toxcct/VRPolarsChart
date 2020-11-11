@@ -1,0 +1,76 @@
+/***
+ * generator.css: CSV Generator specific styles
+ * (c) 2017-2018 Toxcct
+ * ---
+ * This stylesheet is cascaded after general.css
+ ***/
+
+
+/**** HEADER ********/
+
+
+/**** NAV ***********/
+
+
+/**** FOOTER ********/
+footer img	{vertical-align:text-bottom; margin-right:3px;}
+
+/**** CONTENT *******/
+article				{background-color:rgba(255, 255, 255, 0.5); border:1px solid #999; border-radius:5px; box-shadow:0px 4px 10px 0px #4e4e4e; padding:10px 0; margin-top:10px; position:relative;}
+article textarea	{font:9pt monospace; width:97%; height:300px; resize:none;}
+
+article #hidding_input_wrapper	{width:97%; height:0; overflow:hidden; margin:0 auto;}
+article #raw_input				{z-index:1; width:757px; margin-right:20px;}
+article #boats_select			{position:absolute; top:10px; right:12px; z-index:2; width:20px; height:20px; text-align:center; padding:0; color:#00f; font-size:14px;}
+article #boats_list				{width:160px; height:300px; top:10px; right:12px; position:absolute; z-index:3; background-color:#f9f9f9; display:none;}
+
+article #process_controls							{width:97%; margin:10px auto; border:1px dashed gray; padding:10px 0; background-color:#ddd; user-select:none;}
+article #process_controls #btns						{text-align:center;}
+article #process_controls #btns > *					{margin:0 5px;}
+article #process_controls #btns > button			{width:100px;}
+article #process_controls #btns > #toggle_input		{width:30px; font-weight:bold;}
+article #process_controls #hidding_ctrls_wrapper	{width:97%; height:0; overflow:hidden; margin:0 auto;}
+article #process_controls #options_list				{display:grid; grid-template-columns:1fr 460px; grid-gap:7px;}
+article #process_controls #options_list .br			{display:block; height:16px;}
+
+article #process_controls .tab											{display:block; width:100%; margin:10px auto 0; text-align:left;}
+article #process_controls .tab .title									{display:inline-block; border:1px solid #eee; border-bottom:none; padding:2px 5px; color:#eee; background-color:#999; border-top-left-radius:5px; border-top-right-radius:5px;}
+article #process_controls .tab .content									{border:1px solid #ccc; padding:10px; background-color:#fbfbfb;}
+article #process_controls .tab .content > *								{vertical-align:middle;}
+article #process_controls .tab .content label							{color:#22488e;}
+article #process_controls .tab .content input[type][disabled] + label	{color:lightgray;}
+article #process_controls .tab .content input[type=button]				{padding:4px 7px; border-radius:2px; margin-left:4px; margin-top:5px; min-width:100px;}
+article #process_controls .tab .content input[type=button] + input[type=button]	{margin-left:10px;}
+article #process_controls .tab .content input[type=radio]				{margin-right:0;}
+article #process_controls .tab .content input[type=checkbox]			{margin-right:0;}
+article #process_controls .tab .content label + input[type=checkbox]	{margin-left:25px;}
+article #process_controls .tab .content label + input[type=radio]		{margin-left:8px;}
+
+article #process_controls #polars_readout					{display:grid;/* padding-top:5px;*/ background-color:#3a3a3a; color:#00f300; font-family:monospace; grid-template-columns:auto auto;}
+article #process_controls #polars_readout > *				{border:1px solid #4c4646;}
+article #process_controls #polars_readout .reply			{display:block; margin-bottom:5px; color:#fff;}
+article #process_controls #polars_readout .reply::before	{content:"\0000a0\0000a0\0000a0\0000a0";}
+article #process_controls #polars_readout .reply .val		{color:#ff7a7a;}
+article #process_controls #polars_readout .reply .err		{color:#d184ff;}
+
+article input[type=checkbox][disabled] + label				{color:#aaa !important; text-shadow:1px 1px 1px #fff;}
+
+article #msg_output					{width:94.5%; font:9pt monospace; color:#333; margin:10px auto; border:1px dashed gray; padding:10px; background-color:#ddd; text-align:left; user-select:none;}
+article #msg_output.error			{color:#f00; background-color:#f3d4d4;}
+article #msg_output.info			{color:#00f; background-color:#bfd5f5;}
+article #msg_output a				{text-decoration:underline;}
+article #msg_output #info_showinput,
+article #msg_output #info_showlist	{text-decoration:underline; text-decoration-color:#777; cursor:pointer;}
+
+article #csv_array			{display:none; width:97%; margin:10px auto; font-size:10px; table-layout:fixed;}
+article #csv_array td		{border:1px solid #000; overflow:hidden; white-space:nowrap; padding:0 2px;}
+article #csv_array .b		{font-weight:bold; background-color:#ccc;}
+article #csv_array .JIB				{background-color:#cd034280;}
+article #csv_array .SPI				{background-color:#00ff0080;}
+article #csv_array .STAYSAIL		{background-color:#0000ff80;}
+article #csv_array .LIGHT_JIB		{background-color:#f6787680;}
+article #csv_array .CODE_0			{background-color:#00a00080;}
+article #csv_array .HEAVY_GNK		{background-color:#b0000080;}
+article #csv_array .LIGHT_GNK		{background-color:#d7790080;}
+
+article #csv_output			{color:#333; font-size:7pt; display:none;}

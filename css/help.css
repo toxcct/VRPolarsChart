@@ -1,0 +1,70 @@
+/***
+ * help.css: Polars' Help specific styles
+ * (c) 2017-2018 Toxcct
+ * ---
+ * This stylesheet is cascaded after general.css
+ ***/
+
+
+/**** GLOBAL ********/
+.sticky			{position:sticky; top:5px;}
+.center			{text-align:center	!important;}
+.right			{text-align:right   !important;}
+.hidden			{display:none		!important;}
+.clear			{clear:both			!important;}
+
+.race_incoming		{color:#0c0ccc;}
+.race_inprogress	{color:#13be13;}
+.race_closing		{color:#970303;}
+.race_closed		{color:#000000;}
+
+
+/**** HEADER ********/
+
+
+/**** NAV ***********/
+
+
+/**** FOOTER ********/
+
+
+/**** CONTENT *******/
+article						{width:940px; grid-template-columns:1fr 740px !important; line-height:1.2em;}
+
+.contentframe				{min-height:initial !important; margin-bottom:20px; padding:10px; text-align:left;}
+.contentframe h1			{font-weight:bold; text-align:center; font-size:1.6em; color:#008275; padding:0 0 5px; line-height:1em;}
+.contentframe h3			{font-weight:normal; text-align:center; font-size:1.2em; color:#008275; padding:5px 0;}
+.contentframe h5			{font-weight:bold; text-align:left; border-bottom:1px solid #999; padding:0 0 10px 10px; margin-bottom:10px;}
+.contentframe p				{text-align:justify; margin:5px 10px 0px; color:#404040; line-height:1.5em;}
+.contentframe p  + p,
+.contentframe ul + p,
+.contentframe h1 + p,
+.contentframe h3 + p		{margin-top:20px;}
+.contentframe p img			{display:block; border:1px solid #ccc; margin:0 auto 20px;}
+.contentframe p + p > img	{margin-top:-10px;}
+.contentframe img.inline	{display:inline-block; margin:0; border:0; vertical-align:sub;}
+.contentframe p.favicon		{margin:0 0 0 50px;}
+.contentframe .favicon img	{display:inline-block; width:16px; vertical-align:bottom; margin:0; border:0;}
+.contentframe img.flt_left	{float:left; margin-right:20px;}
+.contentframe img.flt_right	{float:right; margin-left:20px;}
+.contentframe p img + img	{margin-top:-10px;}
+.contentframe ul			{list-style:disc; margin:0px 10px 20px 50px; color:#404040;}
+.contentframe p + ul		{margin-top:5px;}
+.contentframe a.innerlnk	{border-bottom:1px dotted; color:#7587e7; text-decoration:none;}
+.contentframe hr			{height:0; border:none; border-bottom:1px solid #999; margin:30px auto; width:100px; clear:both;}
+
+pre {border:1px solid #999; margin:5px 55px 10px; padding:5px; background-color:#d5d5d5; font-family:monospace; overflow:auto;}
+pre.json .key		{color:#971193;}
+pre.json .val.str	{color:#dd7000;}
+pre.json .val.num	{color:#034ed7;}
+pre.json .val.bool	{color:#149904;}
+pre .highlight		{cursor:help; background-color:#ea535336;}
+
+ul.sails				{font-weight:bold; line-height:2;}
+ul.sails li.JIB			{color:#cd0342;}
+ul.sails li.SPI			{color:#00ff00;}
+ul.sails li.STAYSAIL	{color:#0000ff;}
+ul.sails li.LIGHT_JIB	{color:#f67876;}
+ul.sails li.CODE_0		{color:#00a000;}
+ul.sails li.HEAVY_GNK	{color:#b00000;}
+ul.sails li.LIGHT_GNK	{color:#d77900;}

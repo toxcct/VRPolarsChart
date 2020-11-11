@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title>Release Notes</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="description"	lang="en" content="Toxcct's Polars Release Notes">
+	<meta name="abstract"		lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore">
+	<meta name="title"			lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore Races">
+	<meta name="author"			lang="en" content="toxcct">
+	<meta name="keywords"		content="toxcct, Polars, Chart, Virtual, Regatta, Offshore, Boat, Race, Races, Zezo">
+	<meta name="robots"			content="all">
+	<meta name="rating"			content="General">
+	<meta name="category"		content="Sport">
+	<meta name="publisher"		content="Toxcct">
+	<meta name="copyright"		content="Toxcct 2019">
+ 	<meta name="viewport"		content="width=device-width, initial-scale=1">
+ 	<link rel="icon"			type="image/png" href="favicon-help.png" />
+	<link rel="stylesheet"		type="text/css"	 href="css/general.css?v=5.5.2"		media="screen" />
+	<link rel="stylesheet"		type="text/css"	 href="css/help.css?v=5.5.2"		media="screen" />
+	<link rel="stylesheet"		type="text/css"	 href="css/releases.css?v=5.5.2"	media="screen" />
+	<script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"					defer ></script>
+	<script type="text/javascript" src="js/releases.js?v=5.5.2"						defer ></script>
+	<script type="text/javascript" src="js/lib/gtag.js?v=5.5.2"						defer ></script>
+</head>
+
+<body>
+	<header id="_top"></header>
+	<article class="grid2cols">
+		<div class="column1">
+			<div class="sticky">
+				<div class="sidebox grid1cols">
+					<span><a href="./">&loarr; Polars Chart Application</a></span>
+				</div>
+				<div class="sidebox grid1cols">
+					<span><a href="./generator.htm">&loarr; CSV Generator Application</a></span>
+				</div>
+				<div class="sidebox grid1cols" id="toc"></div>
+			</div>
+		</div>
+
+		<div class="column2">
+			<div class="contentframe">
+				<h1>Release Notes</h1>
+			</div>
+
+			<div class="contentframe" id="chart">
+				<h3><b>Polars Chart Application</b></h3>
+
+				<h5>5.5.2</h5>
+				<ul>
+					<li><b>BugFix:</b> An invalid condition was automatically hidding incoming races closer than 30 days</li>
+				</ul>
+
+				<h5>5.5</h5>
+				<ul>
+					<li><b>Feature:</b> Added a way to show still-not-closed hidden races</li>
+					<li><b>Update:</b> Tweaked the colors and opacity of the races selection banner</li>
+				</ul>
+
+				<h5>5.4</h5>
+				<ul>
+					<li><b>Feature:</b> Display the foiling rate (percentage of foils usage) instead of speed ratio</li>
+					<li><b>Feature:</b> Display tenths of degrees for the optimum upwind/downwind VMGs and maximum speed</li>
+					<li><b>Update:</b> Updated a mispelled word in the countdown</li>
+					<li><b>Update:</b> Updated the countdown interval for races in progress</li>
+					<li><b>Update:</b> Updated the countdown display for closed races</li>
+					<li><b>BugFix:</b> Calculation for best downwind VMG could be under optimum angle</li>
+					<li><b>BugFix:</b> Fixed the maximum races' thumbnails shomn at once to prevent breaking display</li>
+					<li><b>BugFix:</b> Fixed the "Races Closed" thumbnail when hidding and showing back a still running race</li>
+				</ul>
+
+				<h5>5.3</h5>
+				<ul>
+					<li><b>Feature:</b> New Contact Form provided for direct email purpose</li>
+					<li><b>Feature:</b> Provides the boat name in the Race thumbnail tooltip</li>
+					<li><b>Update:</b> Added link to the Facebook page</li>
+					<li><b>Update:</b> Help section with images made consistent with actual application</li>
+					<li><b>Update:</b> Added colored fill inside sails curves when 'Plot Full Sails Curves' option enabled</li>
+					<li><b>Update:</b> Help section with new Features</li>
+					<li><b>Update:</b> Published the Release Notes (since Beta is closed)</li>
+					<li><b>Update:</b> Added details to the Help section</li>
+					<li><b>Update:</b> Improved page loading performance</li>
+					<li><b>Update:</b> Increased race appearing threshold to 30 days</li>
+					<li><b>Update:</b> Improved Performance, Accessibility and Security Issues</li>
+					<li><b>Update:</b> Resized races thumbnails images for performance</li>
+					<li><b>BugFix:</b> Bad HTTP request was sent to the server on races with no flag provided</li>
+					<li><b>BugFix:</b> Images vertical alignment</li>
+				</ul>
+
+				<h5>5.2</h5>
+				<ul>
+					<li><b>Feature:</b> New option to plot separated sails curves</li>
+				</ul>
+
+				<h5>5.1</h5>
+				<ul>
+					<li><b>Update:</b> New Help section</li>
+					<li><b>BugFix:</b> Wrong library path remaining in Help section files</li>
+				</ul>
+
+				<h5>5.0</h5>
+				<ul>
+					<li><b>Feature:</b> Handling JSON datafiles live updates</li>
+					<li><b>Feature:</b> New race map button</li>
+					<li><b>Feature:</b> Handling URL Parameters</li>
+					<li><b>Feature:</b> Handling ZIP/CSV absence on server</li>
+					<li><b>Update:</b> New CSV Generator Favicon</li>
+					<li><b>Update:</b> Page Title</li>
+					<li><b>Update:</b> Exception-Proof of entire Chart code</li>
+					<li><b>Update:</b> Paypal icon</li>
+					<li><b>Update:</b> Moved Archive/Restore buttons</li>
+					<li><b>Update:</b> Updated races ids according to VR Ids</li>
+					<li><b>BugFix:</b> Races Archived imgbtn selection</li>
+					<li><b>BugFix:</b> Correctly accepts utm_source URL parameter</li>
+					<li><b>BugFix:</b> Integral rounding of TWA</li>
+				</ul>
+			</div>
+
+			<div class="contentframe" id="csvgen">
+				<h3><b>CSV Generator Application</b></h3>
+
+				<h5>2.3</h5>
+				<ul>
+					<li><b>Feature:</b> Added XML format support for MaxSea TimeZero router</li>
+					<li><b>Update:</b> Renamed the radio button with their relative router</li>
+					<li><b>BugFix:</b> Prevent the 'Copy to Clipboard' button from being clickable during processing</li>
+				</ul>
+
+				<h5>2.2</h5>
+				<ul>
+					<li><b>Update:</b> Footer links updated with Help and Contact form</li>
+					<li><b>Update:</b> Improved Accessibility and Security Issues</li>
+				</ul>
+
+				<h5>2.1</h5>
+				<ul>
+					<li><b>Feature:</b> More output formats</li>
+				</ul>
+
+				<h5>2.0</h5>
+				<ul>
+					<li><b>Feature:</b> Updated Generator axis steps</li>
+				</ul>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

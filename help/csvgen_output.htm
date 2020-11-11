@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title>Help | Generator App | Output Area</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="description"	lang="en" content="Toxcct's Polars Help">
+	<meta name="abstract"		lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore">
+	<meta name="title"			lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore Races">
+	<meta name="author"			lang="en" content="toxcct">
+	<meta name="keywords"		content="toxcct, Polars, Chart, Virtual, Regatta, Offshore, Boat, Race, Races, Zezo">
+	<meta name="robots"			content="all">
+	<meta name="rating"			content="General">
+	<meta name="category"		content="Sport">
+	<meta name="publisher"		content="Toxcct">
+	<meta name="copyright"		content="Toxcct 2018">
+ 	<meta name="viewport"		content="width=device-width, initial-scale=1">
+ 	<link rel="icon"			type="image/png" href="../favicon-help.png" />
+	<link rel="stylesheet"		type="text/css"	 href="../css/general.css?v=5.3.11"	media="screen" />
+	<link rel="stylesheet"		type="text/css"	 href="../css/help.css?v=5.3.11"	media="screen" />
+	<script type="text/javascript" src="../js/lib/jquery-3.2.1.min.js"				defer ></script>
+	<script type="text/javascript" src="../js/help.js?v=5.3.11"						defer ></script>
+	<script type="text/javascript" src="../js/lib/gtag.js?v=5.3.11"					defer ></script>
+</head>
+
+<body>
+	<header id="_top"></header>
+	<article class="grid2cols">
+		<div class="column1">
+			<div class="sticky">
+				<div class="sidebox grid1cols">
+					<span><a href="./">&loarr; Back to Summary</a></span>
+				</div>
+				<div class="sidebox grid1cols" id="toc"></div>
+			</div>
+		</div>
+
+		<div class="column2">
+			<div class="contentframe">
+				<h1>CSV Generator</h1>
+				<h3>Output Area</h3>
+			</div>
+
+			<div class="contentframe" id="_axis">
+				<h5>The Axis</h5>
+				<p>In the raw polar data, two vectors (one-dimensional array) define the graduations for both axis :</p>
+<pre class="json">{
+    <i>&hellip;</i>
+    <span class="key">"tws"</span> : [<span class="val num">0</span>,  <span class="val num">4</span>,  <span class="val num">6</span>,  <span class="val num">8</span>, <span class="val num">10</span>, <span class="val num">12</span>, <span class="val num">14</span>, <span class="val num">16</span>, <span class="val num">18</span>, <span class="val num">20</span>, <span class="val num">22</span>, <span class="val num">24</span>, <span class="val num">26</span>, <span class="val num">28</span>, <span class="val num">30</span>, <span class="val num">40</span>, <span class="val num">50</span>,  <span class="val num">70</span>],
+    <span class="key">"twa"</span> : [<span class="val num">0</span>, <span class="val num">30</span>, <span class="val num">33</span>, <span class="val num">36</span>, <span class="val num">39</span>, <span class="val num">42</span>, <span class="val num">45</span>, <span class="val num">50</span>, <span class="val num">55</span>, <span class="val num">60</span>, <span class="val num">65</span>, <span class="val num">70</span>, <span class="val num">75</span>, <span class="val num">80</span>, <span class="val num">85</span>, <span class="val num">90</span>, <span class="val num">95</span>, <span class="val num">100</span>, <span class="val num">105</span>, <span class="val num">110</span>, <span class="val num">115</span>, <span class="val num">120</span>, <span class="val num">125</span>, <span class="val num">130</span>, <span class="val num">135</span>, <span class="val num">140</span>, <span class="val num">145</span>, <span class="val num">150</span>, <span class="val num">155</span>, <span class="val num">160</span>, <span class="val num">180</span>],
+    <i>&hellip;</i>
+}</pre>
+				<p>&nbsp;</p>
+				<p>These values will be taken as-is into the array generated:</p>
+				<p><img src="img/230.png"></p>
+				<p>However, if the <a href="csvgen_options.htm#_generator_options" class="innerlnk">Interpolated</a> option is checked,
+					the axis change to plots values every 1° (TWA) and ever 1 kt (TWS).</p>
+			</div>
+
+			<div class="contentframe" id="_colors">
+				<h5>The Colors</h5>
+				<p>In the <i>Display as Array</i> output, the cells are getting colored to represent the best sail used to reach that speed<br/>
+					The Colors are the same than the ones used on the <a href="chart_chart.htm#_curve" class="innerlnk">Chart</a> and in the
+					<a href="chart_rightpanels.htm#_sails" class="innerlnk">Sails panel</a>.</p>
+				<p>Here is how a <i>Full Pack</i> on a <i>Class 40</i> boat looks like:</p>
+				<p><img src="img/231.png" class="flt_left"></p>
+				<br/>
+				<ul class="sails"><li class="JIB">Jib</li>
+					<li class="SPI">Light Jib</li>
+					<li class="STAYSAIL">Staysail</li>
+					<li class="LIGHT_JIB">Code 0</li>
+					<li class="CODE_0">Spi</li>
+					<li class="HEAVY_GNK">Light Gennaker</li>
+					<li class="LIGHT_GNK">Heavy Gennaker</li></ul>
+				<p class="clear"><img src="img/232.png" class="flt_right"></p>
+				<p>Of course, you can always hover a cell to gather the exact value and sail name in case you had a doubt.</p>
+				<p class="clear"></p>
+			</div>
+
+			<div class="contentframe" id="_rawoutput">
+				<h5>Raw CSV</h5>
+				<p><img src="img/233.png" class="flt_right"></p>
+				<p>The Raw Output textarea is only there for people who want to check that the content generated and placed in the
+					clipboard is correct.</p>
+				<p>If you trust the generator, then you can forget about the
+					<a href="csvgen_options.htm#_generator_options" class="innerlnk">Toggle Array</a> button.</p>
+				<p class="clear"></p>
+			</div>
+
+			<div class="contentframe" id="_savetofile">
+				<h5>Save to File</h5>
+				<p>Once the output satisfies your needs, you shall save it to a file so it can be used within an external routing application.</p>
+				<p>Just hit the <a href="csvgen_options.htm#_generator_options" class="innerlnk">Copy to Clipboard</a> button, and paste the content generated
+					into a <b>WYSIWYG</b> text editor. It is very important not to use Microsoft&nbsp;Word&trade; or any equivalent Application, because these
+					editors do a lot of things in background, and store a lot more into the file than only simply the text you just wrote there.</p>
+				<p>On the opposite, a <b>WYSIWYG</b> (<b>W</b>hat <b>Y</b>ou <b>S</b>ee <b>i</b>s <b>W</b>hat <b>Y</b>ou <b>G</b>et) lets you edit exactly what will
+					be written in the file to the Hard Drive. Here is a non-exhaustive list of such text editors:</p>
+				<p class="favicon">
+					<img src="https://notepad-plus-plus.org/assets/images/favicon.ico">
+						<a about="_blank" href="https://notepad-plus-plus.org/">Notepad++</a><br/>
+					<img src="https://www.sublimetext.com/favicon.ico">
+						<a about="_blank" href="https://www.sublimetext.com/">Sublime Text</a><br/>
+					<img src="http://brackets.io/favicon.ico">
+						<a about="_blank" href="http://brackets.io/">Brackets</a><br/>
+					<img src="https://atom.io/favicon.ico">
+						<a about="_blank" href="https://atom.io/">Atom</a><br/>
+					<img src="https://code.visualstudio.com/favicon.ico">
+						<a about="_blank" href="https://code.visualstudio.com/">Visual Studio Code</a></p>
+				<p>Of course, you can still use the filthy <b>Notepad</b> editor which is embedded on any PC installed with Microsoft Windows if you don't want to
+					install an application for a single use.</p>
+				<p>Once you pasted the clipboard content into the text editor, then save it to a file, which extension shall correspond to the format you used to generate
+					the polars (for example, <i>your_file_name.<b>csv</b></i> if you chose to export in the CSV format).</p>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

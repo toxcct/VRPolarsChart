@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title>Polars Chart</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="description"	lang="en" content="Toxcct's Polars Chart">
+	<meta name="abstract"		lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore">
+	<meta name="title"			lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore Races">
+	<meta name="author"			lang="en" content="toxcct">
+	<meta name="keywords"		content="toxcct, Polars, Chart, Virtual, Regatta, Offshore, Boat, Race, Races, Zezo">
+	<meta name="robots"			content="all">
+	<meta name="rating"			content="General">
+	<meta name="category"		content="Sport">
+	<meta name="publisher"		content="Toxcct">
+	<meta name="copyright"		content="Toxcct 2019">
+	<meta name="viewport"		content="width=device-width, initial-scale=1">
+	<link rel="icon"			type="image/png" href="favicon.png" />
+	<link rel="stylesheet"		type="text/css"	 href="css/general.css?v=5.5.2"		media="screen" />
+	<link rel="stylesheet"		type="text/css"	 href="css/polars.css?v=5.5.2"		media="screen" />
+	<script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"					defer ></script>
+	<script type="text/javascript" src="js/polars_reader.js?v=5.5.2"				defer ></script>
+	<script type="text/javascript" src="js/polars_storage.js?v=5.5.2"				defer ></script>
+	<script type="text/javascript" src="js/polars_chart.js?v=5.5.2"					defer ></script>
+	<script type="text/javascript" src="js/polars_app.js?v=5.5.2"					defer ></script>
+	<script type="text/javascript" src="js/lib/gtag.js?v=5.5.2"						defer ></script>
+</head>
+
+<body>
+	<header>
+		<div id="race_selection">
+			<select>
+				<optgroup label="Closed races"		></optgroup>
+				<optgroup label="Races in progress"	></optgroup>
+				<optgroup label="Races to come"		></optgroup>
+			</select>
+			<div class="archives_selector no_active_races">
+				<div class="imgbtn" data-race="archives"></div>Races closed
+			</div>
+			<div class="races_in_progress"	></div>
+			<div class="races_incoming"   	></div>
+			<div class="races_hidden_counter"></div>
+			<div class="hidden_races_banner">
+				<div class="races_closed"	></div>
+				<div class="races_hidden"	></div>
+			</div>
+		</div>
+	</header>
+	<article class="grid3cols">
+		<div class="column1">
+			<div class="sidebox grid1cols">
+				<span class="title">Race
+					<div class="rightbtns">
+						<span id="hidebtn"		class="imgbtn" title="Hide this race"></span>
+						<span id="restorebtn"	class="imgbtn" title="Restore this race"></span>
+						<span id="linkbtn"		class="imgbtn" title="Permalink"></span>
+						<a	  id="routebtn"		class="imgbtn" title="Show Map" target="_blank" rel="noopener"></a>
+					</div>
+				</span>
+				<span id="data_race_name">-</span>
+			</div>
+			<div id="data_race_route" class="sidebox grid2cols c20x1fr">
+				<span>&map;</span><span class="from"><span class="img"></span><span class="name"></span></span>
+				<span>&rarrb;</span><span class="to"><span class="img"></span><span class="name"></span></span>
+			</div>
+			<div class="sidebox grid1cols">
+				<span class="title">Boat</span>
+				<span id="data_boat_name">-</span>
+			</div>
+			<div class="sidebox grid1cols">
+				<span class="title" id="data_event_title">Information display</span>
+				<span id="data_event_dt">-</span>
+				<span id="data_countdown">-</span>
+			</div>
+			<div class="sidebox grid1cols">
+				<span class="title">Get Polars</span>
+				<span><a href="generator.htm" title="Open the CSV Generator and build your own custom Polar files">
+					<div class="lnk_icon left cog"></div>Generate your own files</a></span>
+			</div>
+			<div class="sidebox grid1cols">
+				<span class="title">Menu</span>
+				<span><a href="help/" title="Open the documentary space about Polars Applications">
+					<div class="lnk_icon left help"></div>Help</a></span>
+				<span><a href="contact.php" title="Contact form to report bugs, submit feature requests, or say Hi">
+					<div class="lnk_icon left email"></div>Write an Email</a></span>
+				<span><a target="_blank" rel="noopener" href="https://fb.me/VRPolarsChart/">
+					<div class="lnk_icon left fb"></div>Visit me on Facebook</a></span>
+				<span><a target="_blank" rel="noopener" href="https://paypal.me/TOXCCT" title="Support and recognize my work here">
+					<div class="lnk_icon left paypal"></div>Donate here</a></span>
+			</div>
+			<div class="sidebox grid1cols">
+				<span class="title">Partners</span>
+				<span><a target="_blank" rel="noopener" href="http://zezo.org">
+						<div class="lnk_icon left zezo"></div>Zezo.org</a></span>
+				<span><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/vr-dashboard/amknkhejaogpekncjekiaolgldbejjan">
+						<div class="lnk_icon left vrdash"></div>VR Dashboard</a></span>
+				<span><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/route-zezoorg/hfmdbddgjlicmflejkkoafbkdgnfggbg">
+						<div class="lnk_icon left rtmulti"></div>Route zezo.org (MultiRaces)</a></span>
+				<span><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/route-zezoorg/dcgkemofanbgjhnbmjjfomcgdkmobhgi">
+						<div class="lnk_icon left rtmono"></div>Route zezo.org (MonoRace)</a></span>
+			</div>
+			<div class="sidebox grid1cols">
+				<span class="title">Advertisement</span>
+				<object class="ads" aria-label="advertisement"></object>
+			</div>
+		</div>
+
+		<div class="column2 contentframe">
+			<main>
+				<canvas id="polars_chart_scale"	width="425" height="675"></canvas>
+				<canvas id="polars_chart_vmg"	width="425" height="675"></canvas>
+				<canvas id="polars_chart_foils"	width="425" height="675"></canvas>
+				<canvas id="polars_chart_vmgprj"width="425" height="675"></canvas>
+				<canvas id="polars_chart_spdprj"width="425" height="675"></canvas>
+				<canvas id="polars_chart_data"	width="425" height="675"></canvas>
+				<canvas id="polars_chart_twa"	width="425" height="675"></canvas>
+				<canvas id="polars_chart_course"	width="425" height="675"></canvas>
+				<div id="error_message"	></div>
+				<div id="info_message"	></div>
+			</main>
+		</div>
+
+		<div class="column3">
+			<div class="sidebox grid2cols">
+				<span class="title">Attitude</span>
+				<span class="column1" title="True Wind Angle">TWA</span><span class="column2" id="data_twa">
+					<span class="val unit_deg">0</span>
+					<div id="twa_btns">
+						<button id="btn_twa_m1" title="-1°">-</button>
+						<button id="btn_twa_p1" title="+1°">+</button>
+					</div></span>
+				<span class="column1" title="Boat Speed">Speed</span><span class="column2" id="data_boat_speed">
+					<span class="val unit_kts">0</span>
+					<input type="checkbox" id="spdprj_overlay" title="Display Boat Speed projection to Axis" /></span>
+				<span class="column1" title="Velocity Made Good">VMG</span><span class="column2" id="data_vmg">
+					<span class="val unit_kts">0</span>
+					<input type="checkbox" id="vmg_overlay" title="Display VMG projection to Axis" /></span>
+			</div>
+			<div class="sidebox grid5cols">
+				<label class="input_lbl" title="True Wind Speed" for ="data_tws">TWS:</label>
+				<input type="text" id="data_tws" maxlength="5" class="val unit_kts center" value="0" autofocus />
+				<span class="input_lbl unit_kts"></span>
+
+				<button id="btn_setsp_m10" title="-1 kt">&lt;&lt;</button>
+				<button id="btn_setsp_m1"  title="-0.1 kts">&lt;</button>
+				<span>&nbsp;</span>
+				<button id="btn_setsp_p1"  title="+0.1 kts">&gt;</button>
+				<button id="btn_setsp_p10" title="+1 kt">&gt;&gt;</button>
+			</div>
+			<div class="sidebox grid2cols">
+				<span class="title">Maximum</span>
+				<span class="column1" title="True Wind Angle">TWA</span><span class="column2" title="Boat Speed">Speed</span>
+				<span class="column1 unit_deg clickable" id="data_maxsp_twa">0</span><span class="column2 val unit_kts clickable" id="data_maxsp_bs">0</span>
+				<span class="sep">&nbsp;</span>
+				<span class="title">Optimums</span>
+				<span class="column1" title="True Wind Angle">TWA</span><span class="column2" title="Velocity Made Good">VMG</span>
+				<span class="column1 unit_deg clickable" id="data_twa_up">0</span><span class="column2 val unit_kts clickable" id="data_vmg_up">0</span>
+				<span class="column1 unit_deg clickable" id="data_twa_down">0</span><span class="column2 val unit_kts clickable" id="data_vmg_down">0</span>
+			</div>
+			<div class="sidebox grid3cols">
+				<span class="title">Options</span>
+				<input type="checkbox" class="column1" id="opt_light"	/><label class="column2" for="opt_light">-</label><span></span>
+				<input type="checkbox" class="column1" id="opt_heavy"	/><label class="column2" for="opt_heavy">-</label><span></span>
+				<input type="checkbox" class="column1" id="opt_reach"	/><label class="column2" for="opt_reach">-</label><span></span>
+				<input type="checkbox" class="column1" id="opt_foil"	/><label class="column2" for="opt_foil" >-
+					<span id="foils_factor"	title="Factor by which the boat speed is increased"></span>
+					<span id="foils_rate"	title="Rate by which the foils are kicking"></span></label>
+					<input type="checkbox" id="foils_overlay" title="Display foils activation range" />
+				<input type="checkbox" class="column1" id="opt_hull"	/><label class="column2" for="opt_hull" >-</label><span></span>
+			</div>
+			<div class="sidebox grid3cols c20x1frx35">
+				<span class="title">Sails
+					<input type="checkbox" id="opt_plotfullcurves" class="leftbtns" title="Plot full sails curves" />
+				</span>
+				<span class="column1 sail img JIB"		><input type="checkbox" class="leftbtns" /></span><span class="column2">-</span><span class="column3 val">0</span>
+				<span class="column1 sail img LIGHT_JIB"><input type="checkbox" class="leftbtns" /></span><span class="column2">-</span><span class="column3 val">0</span>
+				<span class="column1 sail img STAYSAIL"	><input type="checkbox" class="leftbtns" /></span><span class="column2">-</span><span class="column3 val">0</span>
+				<span class="column1 sail img CODE_0"	><input type="checkbox" class="leftbtns" /></span><span class="column2">-</span><span class="column3 val">0</span>
+				<span class="column1 sail img SPI"		><input type="checkbox" class="leftbtns" /></span><span class="column2">-</span><span class="column3 val">0</span>
+				<span class="column1 sail img LIGHT_GNK"><input type="checkbox" class="leftbtns" /></span><span class="column2">-</span><span class="column3 val">0</span>
+				<span class="column1 sail img HEAVY_GNK"><input type="checkbox" class="leftbtns" /></span><span class="column2">-</span><span class="column3 val">0</span>
+			</div>
+			<div class="sidebox grid1cols">
+				<span class="dim">Version <span id="app_version">-</span>
+				<a href="release_notes.htm" title="See Release Notes"><div class="lnk_icon right release"></div></a></span>
+			</div>
+			<button id="reset_stored_data" class="bigRedButton">Reset Application</button>
+		</div>
+	</article>
+	<footer>
+	</footer>
+</body>
+</html>

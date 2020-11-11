@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>CSV Generator</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="description" lang="fr" content="Toxcct's (Polars for Virtual Regatta Offshore)">
+	<meta name="abstract" lang="fr" content="Toxcct's (Polars for Virtual Regatta Offshore)">
+	<meta name="keywords" content="toxcct, Virtual, Regatta, Offshore, Polars">
+	<meta name="title" content="Toxcct's (Polars for Virtual Regatta Offshore Races)">
+	<meta name="robots" content="all">
+	<meta name="rating" content="General">
+	<meta name="category" content="Sport">
+	<meta name="publisher" content="Toxcct">
+	<meta name="author" lang="fr" content="toxcct">
+	<meta name="copyright" content="Toxcct 2018">
+	<link rel="icon" type="image/png" href="favicon-gen.png" />
+	<link rel="stylesheet"	type="text/css"	href="css/general.css?v=2.3.4"		media="screen" />
+	<link rel="stylesheet"	type="text/css"	href="css/generator.css?v=2.3.4"	media="screen" />
+	<script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"				defer ></script>
+	<script type="text/javascript" src="js/polars_reader.js?v=2.3.4"			defer ></script>
+	<script type="text/javascript" src="js/generator.js?v=2.3.4"				defer ></script>
+	<script type="text/javascript" src="js/lib/gtag.js?v=2.3.4"					defer ></script>
+</head>
+<body>
+	<article>
+		<div id="hidding_input_wrapper">
+			<textarea id="raw_input"></textarea>
+			<button id="boats_select">&dtrif;</button>
+			<select id="boats_list" size="15"></select>
+		</div>
+
+		<div id="msg_output"></div>
+
+		<div id="process_controls">
+			<div id="btns">
+				<button class="bigGreenButton" id="read_data">Read Input</button>
+				<button class="bigBlueButton"  id="toggle_input" title="Toggle Input Field">+</button>
+				<button class="bigRedButton"   id="process_data" disabled>Generate &rArr;</button>
+			</div>
+			<div id="hidding_ctrls_wrapper">
+				<div id="wrapped_content">
+					<div id="sails_list">
+						<div class="tab">
+							<span class="title">Sails available</span>
+							<div class="content">Read input first...</div>
+						</div>
+					</div>
+					<div id="options_list">
+						<div id="boat_options" class="tab">
+							<span class="title">Boat options</span>
+							<div class="content">Read input first...</div>
+						</div>
+						<div id="generator_options" class="tab">
+							<span class="title">Generator options</span>
+							<div class="content">
+								<input type='checkbox' class='genopt' id='opt_intrpol' />
+								<label for='opt_intrpol' title='Interpolation by every 1° and every 1 kt'>Interpolate missing values</label>
+								<br/>
+								<input type='radio' name='out_format' class='genopt' id='opt_csv' data-filename='<i>MyFileName</i>.csv' data-sepchar=';' checked />
+								<label for='opt_csv' title='Comma-separated values (.CSV)'>QtVlm/OpenCPN</label>
+								<input type='radio' name='out_format' class='genopt' id='opt_ssv' data-filename='<i>MyFileName</i>.pol' data-sepchar=' ' />
+								<label for='opt_ssv' title='Space-separated values (.POL)'>Squid/SimSail</label>
+								<input type='radio' name='out_format' class='genopt' id='opt_tsv' data-filename='<i>MyFileName</i>.pol' data-sepchar='&#9;' />
+								<label for='opt_tsv' title='Tab-separated values (.POL)'>Adrena/SailGrib</label>
+								<input type='radio' name='out_format' class='genopt' id='opt_xml' data-filename='Wind_Polar.xml'  />
+								<label for='opt_xml' title='XML'>MaxSea</label>
+								<br/>
+								<input type='button' class='genopt bigBlueButton' id='opt_array'	value='Toggle Array'		disabled />
+								<input type='button' class='genopt bigBlueButton' id='opt_copycsv'	value='Copy to Clipboard'	disabled />
+							</div>
+						</div>
+					</div>
+					<div id="polars_readout" class="tab"></div>
+				</div>
+			</div>
+		</div>
+
+		<textarea id="csv_output" disabled></textarea>
+		<table id="csv_array"></table>
+	</article>
+
+	<footer>
+		<a href="release_notes.htm#csvgen" title="See Release Notes"><img src="css/img/report.png" />Generator v<span id="app_version">-</span></a>
+		&nbsp;&mdash;&nbsp; <a href="./">Polars Chart Application</a>
+		&nbsp;&mdash;&nbsp; <a href="./help/"><img src="css/img/help.png" />Help Center</a>
+		&nbsp;&mdash;&nbsp; <a href="./contact.php"><img src="css/img/page_edit.png" />Contact Me</a>
+		&nbsp;&mdash;&nbsp; <a href="https://fb.me/VRPolarsChart/" target="_blank" rel="noopener"><img src="css/img/facebook.png" />@VRPolarsChart</a>
+	</footer>
+</body>
+</html>

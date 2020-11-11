@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title>Help | Definitions</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="description"	lang="en" content="Toxcct's Polars How To">
+	<meta name="abstract"		lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore">
+	<meta name="title"			lang="en" content="Toxcct's Polars Chart for Virtual Regatta Offshore Races">
+	<meta name="author"			lang="en" content="toxcct">
+	<meta name="keywords"		content="toxcct, Polars, Chart, Virtual, Regatta, Offshore, Boat, Race, Races, Zezo">
+	<meta name="robots"			content="all">
+	<meta name="rating"			content="General">
+	<meta name="category"		content="Sport">
+	<meta name="publisher"		content="Toxcct">
+	<meta name="copyright"		content="Toxcct 2018">
+ 	<meta name="viewport"		content="width=device-width, initial-scale=1">
+ 	<link rel="icon"			type="image/png" href="../favicon-help.png" />
+	<link rel="stylesheet"		type="text/css"	 href="../css/general.css?v=5.3.11"	media="screen" />
+	<link rel="stylesheet"		type="text/css"	 href="../css/help.css?v=5.3.11"	media="screen" />
+	<script type="text/javascript" src="../js/lib/jquery-3.2.1.min.js"				defer ></script>
+	<script type="text/javascript" src="../js/help.js?v=5.3.11"						defer ></script>
+	<script type="text/javascript" src="../js/lib/gtag.js?v=5.3.11"					defer ></script>
+</head>
+
+<body>
+	<header id="_top"></header>
+	<article class="grid2cols">
+		<div class="column1">
+			<div class="sticky">
+				<div class="sidebox grid1cols">
+					<span><a href="./">&loarr; Back to Summary</a></span>
+				</div>
+				<div class="sidebox grid1cols" id="toc"></div>
+			</div>
+		</div>
+
+		<div class="column2">
+			<div class="contentframe">
+				<h1>Definitions</h1>
+			</div>
+
+			<div class="contentframe" id="_twd">
+				<h5>TWD</h5>
+				<p><b class="gray">True Wind Direction</b></p>
+				<p>The direction from which the wind blows, regardless its speed and the attitude of the boat.</p>
+				<p>By convention, we always refer to the direction the wind blows <u><b>from</b></u>, and not where it blows <u>to</u>.</p>
+			</div>
+
+			<div class="contentframe" id="_tws">
+				<h5>TWS</h5>
+				<p><b class="gray">True Wind Speed</b></p>
+				<p>The speed of the wind, regardless its direction and the attitude of the boat.</p>
+				<p>Wind speed is generally expressed in <a href="#_knot" class="innerlnk">Knots</a>, but the game also allows speeds in km/h.</p>
+			</div>
+
+			<div class="contentframe" id="_hdg">
+				<h5>HDG</h5>
+				<p><b class="gray">Heading of the Boat</b></p>
+				<p>The direction which the boat points to. This is what you set by moving the helm, and is the direction your boat will be keeping
+					as long as the <a href="#_twa" class="innerlnk">'Locked TWA'</a> game option is not set.</p>
+			</div>
+
+			<div class="contentframe" id="_knot">
+				<h5>Knot</h5>
+				<p>The knot is a unit of speed equal to one <a href="#_mile" class="innerlnk">Nautical Mile</a> per hour, exactly 1.852 km/h (approx. 1.15078 mph).</p>
+				<p>The ISO standard symbol for the knot is <b>kn</b>; <b>kt</b> is also common, and used by Virtual Regatta&trade; and on this site.</p>
+			</div>
+
+			<div class="contentframe" id="_mile">
+				<h5>Nautical Mile</h5>
+				<p>A Nautical Mile is a unit of measurement defined as exactly 1,852 metres (6,076.1 ft; 1.1508 mi).<br/>
+					Historically, it was defined as one minute of latitude, which is equivalent to one sixtieth of a degree of latitude.</p>
+				<p>The derived unit of speed is the <a href="#_knot" class="innerlnk">Knot</a>, defined as one nautical mile per hour. </p>
+				<p>The ISO standard recognizes several symbols; <b>NM</b> is used by Virtual Regatta&trade; and on this site.</p>
+			</div>
+
+			<div class="contentframe" id="_twa">
+				<h5>TWA</h5>
+				<p><b class="gray">True Wind Angle</b></p>
+				<p><img src="img/010.png" class="flt_right"></p>
+				<p>This is the angle between your <a href="#_hdg" class="innerlnk">HDG</a> and the <a href="#_twd" class="innerlnk">TWD</a>.</p>
+				<p>Two handles are displayed on the compass:<br/><br/></p>
+				<ul><li>The <b>white disc</b> is the helm, and indicates the boat's Heading (<i>HDG</i>).</li>
+					<li>The <b>white triangle</b> indicates the direction of the wind (<i>TWD</i>).</li></ul>
+				<p>On the example beside, the boat is heading 298°, while the wind is coming from 5°.<br/>
+					If you do the maths, there is an angle of 67° between those two headings, and that is exactly what the <b>TWA</b> is.</p>
+				<p>Additionally, we often indicates is the wind comes from port side (left) or from starboard side (right).</p>
+				<p>The game interface also provides a 'Locked TWA' option.<br/>
+					When this option is enabled, then the boat will no more sail straight ahead. Instead, it's path will be curved so that it
+					constantly keeps the same TWA.</p>
+			</div>
+
+			<div class="contentframe" id="_boatspeed">
+				<h5>Boat Speed</h5>
+				<p><img src="img/011.png" class="flt_right"></p>
+				<p>The Boat Speed represents the straight speed of the boat in the direction of its <a href="#_hdg" class="innerlnk">heading</a>.</p>
+				<p>It is generally expressed in <a href="#_knot" class="innerlnk">Knots</a>, though Virtual Regatta&trade; also supports speeds in km/h.</p>
+				<p>In the <a href="chart_rightpanels.htm#_attitude" class="innerlnk">Attitude Panel</a>, the 'Boat Speed Projection to Axis' option enables
+					the graphical visualization of that speed over the Chart, as shown on the picture beside.</p>
+				<p>The Boat Speed is the value you read at the intersection of the TWA (blue radius) and the curve, away from the center from a certain
+					distance which represents the amount of speed for that angle.</p>
+				<p>On the example beside, we can read that the boat would sail at a speed of 9.185 kts if sailing at a TWA of 80° with a Code&nbsp;0.</p>
+				<p></p>
+			</div>
+
+			<div class="contentframe" id="_vmg">
+				<h5>VMG</h5>
+				<p><b class="gray">Velocity Made Good</b></p>
+				<p><img src="img/012.png" class="flt_right"></p>
+				<p>The VMG represents the amount of the <a href="#_boatspeed" class="innerlnk">boat speed</a> projected to the wind direction axis.</p>
+				<p>We often refer to this speed to figure out the best angle by which the boat can sail upwind or downwind.</p>
+				<p>In the <a href="chart_rightpanels.htm#_attitude" class="innerlnk">Attitude Panel</a>, the 'VMG Projection to Axis' option enables
+					the graphical visualization of that speed over the Chart, as shown on the picture beside.</p>
+				<p>From a mathematical point of view, the Best VMG is the point of the curve having an horizontal outter tangent.</p>
+				<p>On the example beside, we can read that the best upwind VMG is 42°, providing a 6.332 kts toward the wind direction.</p>
+				<p>The Best VMG is only an indication; you may not have to follow it systematically, because your course might not go strictly in
+					the same direction than the wind's.</p>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

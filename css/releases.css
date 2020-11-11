@@ -1,0 +1,23 @@
+/***
+ * releases.css: Polars' Help specific styles
+ * (c) 2017-2018 Toxcct
+ * ---
+ * This stylesheet is cascaded after general.css and help.css
+ ***/
+
+
+/**** GLOBAL ********/
+
+
+/**** HEADER ********/
+
+
+/**** NAV ***********/
+
+
+/**** FOOTER ********/
+
+
+/**** CONTENT *******/
+.contentframe h5	{margin-top:30px;}
+.contentframe ul	{list-style:none; margin:0 0 0 30px;}
