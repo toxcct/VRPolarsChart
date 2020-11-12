@@ -70,11 +70,11 @@ article #error_message #refreshbtn		{margin-top:20px;}
 article .sidebox .title .leftbtns			{position:absolute; left:0; top:0; margin-left:0;}
 article .sidebox .title .rightbtns			{position:absolute; right:0; top:0;}
 article .sidebox .title .rightbtns .imgbtn	{display:inline-block; width:16px; height:16px; cursor:pointer;}
-article #hidebtn							{background-image:url(img/bullet_delete.png);}
-article #restorebtn							{background-image:url(img/bullet_add.png);}
-article #linkbtn							{background-image:url(img/link.png);}
-article #routebtn							{background-image:url(img/map.png);}
-article #routebtn.disabled					{background-image:url(img/map_disabled.png);}
+article #hidebtn							{background-image:url(./img/bullet_delete.png);}
+article #restorebtn							{background-image:url(./img/bullet_add.png);}
+article #linkbtn							{background-image:url(./img/link.png);}
+article #routebtn							{background-image:url(./img/map.png);}
+article #routebtn.disabled					{background-image:url(./img/map_disabled.png);}
 
 /* --> Race Route display --------------------- */
 article .sidebox#data_race_route .from,
@@ -136,7 +136,7 @@ article .sidebox #opt_foil:checked + label #foils_rate		{display:inline-block; f
 article .sidebox input.column1[disabled] + *				{color:#aaa !important; text-shadow:1px 1px 1px #fff;}
 
 /* --> Sails ---------------------------------- */
-article .sidebox .sail.img									{position:relative; background:url(img/sails.png); background-size:112px; height:16px; width:16px; margin:-2px 0 2px; display:inline-block; vertical-align:bottom;}
+article .sidebox .sail.img									{position:relative; background:url(./img/sails.png); background-size:112px; height:16px; width:16px; margin:-2px 0 2px; display:inline-block; vertical-align:bottom;}
 
 article .sidebox .sail.img.JIB								{background-position:  0px  16px;}
 article .sidebox .sail.img.SPI								{background-position:-16px  16px;}
