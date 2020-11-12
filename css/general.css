@@ -99,16 +99,16 @@ article .sidebox	img					{vertical-align:text-bottom; width:11px; padding-right:
 article .sidebox	.lnk_icon			{display:inline-block; width:11px; height:11px; vertical-align:text-bottom; background-size:contain;}
 article .sidebox	.lnk_icon.left		{margin-right:2px;}
 article .sidebox	.lnk_icon.right		{margin-left:2px;}
-article .sidebox	.lnk_icon.cog		{background-image: url(img/cog.png);}
-article .sidebox	.lnk_icon.help		{background-image: url(img/help.png);}
-article .sidebox	.lnk_icon.email		{background-image: url(img/page_edit.png);}
-article .sidebox	.lnk_icon.fb		{background-image: url(img/facebook.png);}
+article .sidebox	.lnk_icon.cog		{background-image: url(./img/cog.png);}
+article .sidebox	.lnk_icon.help		{background-image: url(./img/help.png);}
+article .sidebox	.lnk_icon.email		{background-image: url(./img/page_edit.png);}
+article .sidebox	.lnk_icon.fb		{background-image: url(./img/facebook.png);}
 article .sidebox	.lnk_icon.paypal	{background-image: url(https://www.paypalobjects.com/webstatic/icon/favicon.ico);}
-article .sidebox	.lnk_icon.zezo		{background-image: url(img/zezo_favicon.png);}
+article .sidebox	.lnk_icon.zezo		{background-image: url(./img/zezo_favicon.png);}
 article .sidebox	.lnk_icon.vrdash	{background-image: url(https://lh3.googleusercontent.com/2yTMNQYOVCjJmH24RKw0IzHLn2s8ThqNqshqYa5LpwlR2w_ZX2c3izU-znmJ2lO4NVhhf-WaPA=w26-h26-e365);}
 article .sidebox	.lnk_icon.rtmulti	{background-image: url(https://lh3.googleusercontent.com/owJ7_tU9Idot401rAAADIPiD4rqsxP-yQSEp-anScjDPTLzDy7CGyqJNcQPKnMN-X1IWFTiOwaw=w26-h26-e365);}
 article .sidebox	.lnk_icon.rtmono	{background-image: url(https://lh3.googleusercontent.com/Bvvxxs5BAVP6OnljNc1TD-x7iTZdts4PqrdjVQVm-UjCUC-JhB7RBV4c5cZJ97Z93mjM4_jY6Q=w26-h26-e365);}
-article .sidebox	.lnk_icon.release	{background-image: url(img/report.png);}
+article .sidebox	.lnk_icon.release	{background-image: url(./img/report.png);}
 
 .bigRedButton				{display:inline-block; color:#fff; background-color:#ff5c5c; padding:5px 10px; border:1px solid #f22; border-radius:3px; cursor:pointer; user-select:none; transition-property:color, background-color, border-color; transition-duration:0.3s; transition-timing-function:ease;}
 .bigRedButton:hover			{background-color:#ff8888;}
