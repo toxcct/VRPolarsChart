@@ -27,7 +27,7 @@ $(function() {
 //=================================//
 
 var PolarsApp = (function(){
-	var _versions			= { app:"5.5.2", data:{} };
+	var _versions			= { app:"5.5.3", data:{} };
 	var _bInitialized		= false;
 	var _bError				= false;
 	var _checkVersionRate	= 60; //In seconds
