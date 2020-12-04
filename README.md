@@ -35,7 +35,7 @@ However, it is not designed nor expected to be used in real life navigation.
 - [HTTP GET API](#http-get-api)
 - [Contributing](#contributing)
 - [Versioning](#versioning)
-- [Copyright and license](copyright-and-license)
+- [Copyright and license](#copyright-and-license)
 
 
 ## Quick start
