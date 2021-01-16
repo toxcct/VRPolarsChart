@@ -37,6 +37,7 @@ var PolarsReader = (function() {
 			_polars = {};
 			$.ajax({
 				async	: false,
+				cache	: false,
 				dataType: "json",
 				url		: "data/boats/" + boatType + ".json",
 				success	: function(data){
