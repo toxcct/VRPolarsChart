@@ -61,10 +61,10 @@ pre.json .val.bool	{color:#149904;}
 pre .highlight		{cursor:help; background-color:#ea535336;}
 
 ul.sails				{font-weight:bold; line-height:2;}
-ul.sails li.JIB			{color:#cd0342;}
-ul.sails li.SPI			{color:#00ff00;}
-ul.sails li.STAYSAIL	{color:#0000ff;}
-ul.sails li.LIGHT_JIB	{color:#f67876;}
-ul.sails li.CODE_0		{color:#00a000;}
-ul.sails li.HEAVY_GNK	{color:#b00000;}
-ul.sails li.LIGHT_GNK	{color:#d77900;}
+ul.sails li.Jib			{color:#cd0342;}
+ul.sails li.Spi			{color:#00ff00;}
+ul.sails li.Staysail	{color:#0000ff;}
+ul.sails li.LightJib	{color:#f67876;}
+ul.sails li.Code0		{color:#00a000;}
+ul.sails li.HeavyGnk	{color:#b00000;}
+ul.sails li.LightGnk	{color:#d77900;}

@@ -868,13 +868,13 @@ var PolarsApp = (function(){
 				$("#routebtn").removeClass("disabled").attr("title", "Show Map");
 
 			//Dims the unused sails
-			$(".sail.LIGHT_JIB, .sail.LIGHT_GNK")
+			$(".sail.LightJib, .sail.LightGnk")
 				.removeClass( _chk_opt_light ? "dim" : "")
 				.addClass   (!_chk_opt_light ? "dim" : "");
-			$(".sail.CODE_0")
+			$(".sail.Code0")
 				.removeClass( _chk_opt_reach ? "dim" : "")
 				.addClass   (!_chk_opt_reach ? "dim" : "");
-			$(".sail.STAYSAIL, .sail.HEAVY_GNK")
+			$(".sail.Staysail, .sail.HeavyGnk")
 				.removeClass( _chk_opt_heavy ? "dim" : "")
 				.addClass   (!_chk_opt_heavy ? "dim" : "");
 
@@ -1090,13 +1090,13 @@ var PolarsApp = (function(){
 			$("#data_twa_down"		 ).text(_twa_down			);
 			$("#data_vmg_down"		 ).text(_vmg_down			);
 
-			$(".sail.JIB"		).next().next().text(data.sailsSpeeds.JIB		.fix(2, true));
-			$(".sail.LIGHT_JIB"	).next().next().text(data.sailsSpeeds.LIGHT_JIB	.fix(2, true));
-			$(".sail.STAYSAIL"	).next().next().text(data.sailsSpeeds.STAYSAIL	.fix(2, true));
-			$(".sail.CODE_0"	).next().next().text(data.sailsSpeeds.CODE_0	.fix(2, true));
-			$(".sail.SPI"		).next().next().text(data.sailsSpeeds.SPI		.fix(2, true));
-			$(".sail.LIGHT_GNK"	).next().next().text(data.sailsSpeeds.LIGHT_GNK	.fix(2, true));
-			$(".sail.HEAVY_GNK"	).next().next().text(data.sailsSpeeds.HEAVY_GNK	.fix(2, true));
+			$(".sail.Jib"		).next().next().text(data.sailsSpeeds.Jib		.fix(2, true));
+			$(".sail.LightJib"	).next().next().text(data.sailsSpeeds.LightJib	.fix(2, true));
+			$(".sail.Staysail"	).next().next().text(data.sailsSpeeds.Staysail	.fix(2, true));
+			$(".sail.Code0"		).next().next().text(data.sailsSpeeds.Code0		.fix(2, true));
+			$(".sail.Spi"		).next().next().text(data.sailsSpeeds.Spi		.fix(2, true));
+			$(".sail.LightGnk"	).next().next().text(data.sailsSpeeds.LightGnk	.fix(2, true));
+			$(".sail.HeavyGnk"	).next().next().text(data.sailsSpeeds.HeavyGnk	.fix(2, true));
 
 			$(".sail").removeClass("selected");
 			if (data.current.bestSail)
@@ -1181,13 +1181,13 @@ var PolarsApp = (function(){
 		$("#foils_overlay").prop("disabled", !$("#opt_foil").is(":checked"));
 
 		//Dims the unused sails
-		$(".sail.LIGHT_JIB, .sail.LIGHT_GNK")
+		$(".sail.LightJib, .sail.LightGnk")
 			.removeClass( _chk_opt_light ? "dim" : "")
 			.addClass   (!_chk_opt_light ? "dim" : "");
-		$(".sail.CODE_0")
+		$(".sail.Code0")
 			.removeClass( _chk_opt_reach ? "dim" : "")
 			.addClass   (!_chk_opt_reach ? "dim" : "");
-		$(".sail.STAYSAIL, .sail.HEAVY_GNK")
+		$(".sail.Staysail, .sail.HeavyGnk")
 			.removeClass( _chk_opt_heavy ? "dim" : "")
 			.addClass   (!_chk_opt_heavy ? "dim" : "");
 
@@ -1237,7 +1237,7 @@ var PolarsApp = (function(){
 			$(".sail input[type='checkbox']:checked").parent().map(function(i, elm) {
 				sailsSelected = sailsSelected.concat(
 					$.makeArray(elm.classList).filter(function(str) {
-						return ["JIB","LIGHT_JIB","STAYSAIL","CODE_0","SPI","LIGHT_GNK","HEAVY_GNK"].includes(str);
+						return ["Jib","LightJib","Staysail","Code0","Spi","LightGnk","HeavyGnk"].includes(str);
 					})
 				);
 			});

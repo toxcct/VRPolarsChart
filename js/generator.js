@@ -270,7 +270,7 @@ var Generator = (function(){
 		$("#opt_chknone").click(function(){
 			$("#process_controls input[type=checkbox]:not(.genopt)")
 				.prop("checked", false);
-			$("#JIB, #SPI")
+			$("#Jib, #Spi")
 				.prop("checked", true);
 
 			processInput();

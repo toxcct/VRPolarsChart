@@ -65,12 +65,12 @@ article #msg_output #info_showlist	{text-decoration:underline; text-decoration-c
 article #csv_array			{display:none; width:97%; margin:10px auto; font-size:10px; table-layout:fixed;}
 article #csv_array td		{border:1px solid #000; overflow:hidden; white-space:nowrap; padding:0 2px;}
 article #csv_array .b		{font-weight:bold; background-color:#ccc;}
-article #csv_array .JIB				{background-color:#cd034280;}
-article #csv_array .SPI				{background-color:#00ff0080;}
-article #csv_array .STAYSAIL		{background-color:#0000ff80;}
-article #csv_array .LIGHT_JIB		{background-color:#f6787680;}
-article #csv_array .CODE_0			{background-color:#00a00080;}
-article #csv_array .HEAVY_GNK		{background-color:#b0000080;}
-article #csv_array .LIGHT_GNK		{background-color:#d7790080;}
+article #csv_array .Jib				{background-color:#cd034280;}
+article #csv_array .Spi				{background-color:#00ff0080;}
+article #csv_array .Staysail		{background-color:#0000ff80;}
+article #csv_array .LightJib		{background-color:#f6787680;}
+article #csv_array .Code0			{background-color:#00a00080;}
+article #csv_array .HeavyGnk		{background-color:#b0000080;}
+article #csv_array .LightGnk		{background-color:#d7790080;}
 
 article #csv_output			{color:#333; font-size:7pt; display:none;}
