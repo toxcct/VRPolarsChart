@@ -12,13 +12,13 @@ var PolarsChart = (function(){
 		max				: 25
 	};
 	var _sailsColors		= {
-		"JIB"			: "#cd0342",
-		"SPI"			: "#00ff00",
-		"STAYSAIL"		: "#0000ff",
-		"LIGHT_JIB"		: "#f67876",
-		"CODE_0"		: "#00a000",
-		"HEAVY_GNK"		: "#b00000",
-		"LIGHT_GNK"		: "#d77900"
+		"Jib"			: "#cd0342",
+		"Spi"			: "#00ff00",
+		"Staysail"		: "#0000ff",
+		"LightJib"		: "#f67876",
+		"Code0"			: "#00a000",
+		"HeavyGnk"		: "#b00000",
+		"LightGnk"		: "#d77900"
 	};
 
 	var _polarsData			= [];

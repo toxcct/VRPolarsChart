@@ -138,29 +138,29 @@ article .sidebox input.column1[disabled] + *				{color:#aaa !important; text-sha
 /* --> Sails ---------------------------------- */
 article .sidebox .sail.img									{position:relative; background:url(./img/sails.png); background-size:112px; height:16px; width:16px; margin:-2px 0 2px; display:inline-block; vertical-align:bottom;}
 
-article .sidebox .sail.img.JIB								{background-position:  0px  16px;}
-article .sidebox .sail.img.SPI								{background-position:-16px  16px;}
-article .sidebox .sail.img.STAYSAIL							{background-position:-32px  16px;}
-article .sidebox .sail.img.LIGHT_JIB						{background-position:-48px  16px;}
-article .sidebox .sail.img.CODE_0							{background-position:-64px  16px;}
-article .sidebox .sail.img.HEAVY_GNK						{background-position:-80px  16px;}
-article .sidebox .sail.img.LIGHT_GNK						{background-position:-96px  16px;}
+article .sidebox .sail.img.Jib								{background-position:  0px  16px;}
+article .sidebox .sail.img.Spi								{background-position:-16px  16px;}
+article .sidebox .sail.img.Staysail							{background-position:-32px  16px;}
+article .sidebox .sail.img.LightJib							{background-position:-48px  16px;}
+article .sidebox .sail.img.Code0							{background-position:-64px  16px;}
+article .sidebox .sail.img.HeavyGnk							{background-position:-80px  16px;}
+article .sidebox .sail.img.LightGnk							{background-position:-96px  16px;}
 
-article .sidebox .sail.img.JIB.dim							{background-position:  0px   0px;}
-article .sidebox .sail.img.SPI.dim							{background-position:-16px   0px;}
-article .sidebox .sail.img.STAYSAIL.dim						{background-position:-32px   0px;}
-article .sidebox .sail.img.LIGHT_JIB.dim					{background-position:-48px   0px;}
-article .sidebox .sail.img.CODE_0.dim						{background-position:-64px   0px;}
-article .sidebox .sail.img.HEAVY_GNK.dim					{background-position:-80px   0px;}
-article .sidebox .sail.img.LIGHT_GNK.dim					{background-position:-96px   0px;}
+article .sidebox .sail.img.Jib.dim							{background-position:  0px   0px;}
+article .sidebox .sail.img.Spi.dim							{background-position:-16px   0px;}
+article .sidebox .sail.img.Staysail.dim						{background-position:-32px   0px;}
+article .sidebox .sail.img.LightJib.dim						{background-position:-48px   0px;}
+article .sidebox .sail.img.Code0.dim						{background-position:-64px   0px;}
+article .sidebox .sail.img.HeavyGnk.dim						{background-position:-80px   0px;}
+article .sidebox .sail.img.LightGnk.dim						{background-position:-96px   0px;}
 
-article .sidebox .sail.img.JIB.white						{background-position:  0px -16px;}
-article .sidebox .sail.img.SPI.white						{background-position:-16px -16px;}
-article .sidebox .sail.img.STAYSAIL.white					{background-position:-32px -16px;}
-article .sidebox .sail.img.LIGHT_JIB.white					{background-position:-48px -16px;}
-article .sidebox .sail.img.CODE_0.white						{background-position:-64px -16px;}
-article .sidebox .sail.img.HEAVY_GNK.white					{background-position:-80px -16px;}
-article .sidebox .sail.img.LIGHT_GNK.white					{background-position:-96px -16px;}
+article .sidebox .sail.img.Jib.white						{background-position:  0px -16px;}
+article .sidebox .sail.img.Spi.white						{background-position:-16px -16px;}
+article .sidebox .sail.img.Staysail.white					{background-position:-32px -16px;}
+article .sidebox .sail.img.LightJib.white					{background-position:-48px -16px;}
+article .sidebox .sail.img.Code0.white						{background-position:-64px -16px;}
+article .sidebox .sail.img.HeavyGnk.white					{background-position:-80px -16px;}
+article .sidebox .sail.img.LightGnk.white					{background-position:-96px -16px;}
 
 article .sidebox .sail.selected	+ *							{font-weight:bold;}
 article .sidebox .sail.selected	+ *	+ *						{font-weight:bold;}

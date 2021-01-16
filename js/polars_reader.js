@@ -4,13 +4,13 @@
 
 var PolarsReader = (function() {
 	var _sailsNames	= {
-		"JIB"		: { "en":"Jib",					"fr":"Foc",					"es":"Foque"					},
-		"SPI"		: { "en":"Spi",					"fr":"Spi",					"es":"Spi"						},
-		"STAYSAIL"	: { "en":"Staysail",			"fr":"Trinquette",			"es":"Trinquetilla"				},
-		"LIGHT_JIB"	: { "en":"Light jib",			"fr":"Génois léger",		"es":"Foque ligero"				},
-		"CODE_0"	: { "en":"Code 0",				"fr":"Code 0",				"es":"Código 0"					},
-		"HEAVY_GNK"	: { "en":"Heavy Gennaker",		"fr":"Spi lourd",			"es":"Gennaker pesado"			},
-		"LIGHT_GNK"	: { "en":"Light Gennaker",		"fr":"Spi léger",			"es":"Gennaker ligero"			}
+		"Jib"		: { "en":"Jib",					"fr":"Foc",					"es":"Foque"					},
+		"Spi"		: { "en":"Spi",					"fr":"Spi",					"es":"Spi"						},
+		"Staysail"	: { "en":"Staysail",			"fr":"Trinquette",			"es":"Trinquetilla"				},
+		"LightJib"	: { "en":"Light jib",			"fr":"Génois léger",		"es":"Foque ligero"				},
+		"Code0"		: { "en":"Code 0",				"fr":"Code 0",				"es":"Código 0"					},
+		"HeavyGnk"	: { "en":"Heavy Gennaker",		"fr":"Spi lourd",			"es":"Gennaker pesado"			},
+		"LightGnk"	: { "en":"Light Gennaker",		"fr":"Spi léger",			"es":"Gennaker ligero"			}
 	};
 	var _optionsNames = {
 		"light"		: { "en":"Light wind sails",	"fr":"Voiles petit temps",	"es":"Velas para viento suave"	},
@@ -158,13 +158,13 @@ var PolarsReader = (function() {
 		var maxSpeed	= 0;
 		var maxSail		= "";
 		for (const sailDef of sailDefs) {
-			if ((sailDef.name === "JIB")										||
-				(sailDef.name === "SPI")										||
-				(sailDef.name === "STAYSAIL"	&& options.includes("heavy"))	||
-				(sailDef.name === "LIGHT_JIB"	&& options.includes("light"))	||
-				(sailDef.name === "CODE_0"		&& options.includes("reach"))	||
-				(sailDef.name === "HEAVY_GNK"	&& options.includes("heavy"))	||
-				(sailDef.name === "LIGHT_GNK"	&& options.includes("light")) ) {
+			if ((sailDef.name === "Jib")										||
+				(sailDef.name === "Spi")										||
+				(sailDef.name === "Staysail"	&& options.includes("heavy"))	||
+				(sailDef.name === "LightJib"	&& options.includes("light"))	||
+				(sailDef.name === "Code0"		&& options.includes("reach"))	||
+				(sailDef.name === "HeavyGnk"	&& options.includes("heavy"))	||
+				(sailDef.name === "LightGnk"	&& options.includes("light")) ) {
 				var speeds	= sailDef.speed;
 				var speed	= bilinear(
 						iA.fraction, iS.fraction,
@@ -190,13 +190,13 @@ var PolarsReader = (function() {
 		var retSpeeds = {};
 
 		for (const sailDef of sailDefs) {
-			if ((sailDef.name === "JIB"			) ||
-				(sailDef.name === "SPI"			) ||
-				(sailDef.name === "STAYSAIL"	) ||
-				(sailDef.name === "LIGHT_JIB"	) ||
-				(sailDef.name === "CODE_0"		) ||
-				(sailDef.name === "HEAVY_GNK"	) ||
-				(sailDef.name === "LIGHT_GNK"	) ) {
+			if ((sailDef.name === "Jib"			) ||
+				(sailDef.name === "Spi"			) ||
+				(sailDef.name === "Staysail"	) ||
+				(sailDef.name === "LightJib"	) ||
+				(sailDef.name === "Code0"		) ||
+				(sailDef.name === "HeavyGnk"	) ||
+				(sailDef.name === "LightGnk"	) ) {
 				var speeds	= sailDef.speed;
 				var speed	= bilinear(
 						iA.fraction, iS.fraction,
