@@ -17,7 +17,7 @@ $(function() {
 //=================================//
 
 var Generator = (function(){
-	var _version		= "2.3.4";
+	var _version		= "2.3.5";
 	var _bInitialized	= false;
 	var _bError			= false;
 	var _bShowAsArray	= true;
