@@ -4,20 +4,20 @@
 
 var PolarsReader = (function() {
 	var _sailsNames	= {
-		"Jib"		: { "en":"Jib",					"fr":"Foc",					"es":"Foque"					},
-		"JIB"		: { "en":"Jib",					"fr":"Foc",					"es":"Foque"					},
-		"Spi"		: { "en":"Spi",					"fr":"Spi",					"es":"Spi"						},
-		"SPI"		: { "en":"Spi",					"fr":"Spi",					"es":"Spi"						},
-		"Staysail"	: { "en":"Staysail",			"fr":"Trinquette",			"es":"Trinquetilla"				},
-		"STAYSAIL"	: { "en":"Staysail",			"fr":"Trinquette",			"es":"Trinquetilla"				},
-		"LightJib"	: { "en":"Light jib",			"fr":"Génois léger",		"es":"Foque ligero"				},
-		"LIGHT_JIB"	: { "en":"Light jib",			"fr":"Génois léger",		"es":"Foque ligero"				},
-		"Code0"		: { "en":"Code 0",				"fr":"Code 0",				"es":"Código 0"					},
-		"CODE_0"	: { "en":"Code 0",				"fr":"Code 0",				"es":"Código 0"					},
-		"HeavyGnk"	: { "en":"Heavy Gennaker",		"fr":"Spi lourd",			"es":"Gennaker pesado"			},
-		"HEAVY_GNK"	: { "en":"Heavy Gennaker",		"fr":"Spi lourd",			"es":"Gennaker pesado"			},
-		"LightGnk"	: { "en":"Light Gennaker",		"fr":"Spi léger",			"es":"Gennaker ligero"			},
-		"LIGHT_GNK"	: { "en":"Light Gennaker",		"fr":"Spi léger",			"es":"Gennaker ligero"			}
+		"Jib"		: { "actualId":"Jib",		"en":"Jib",					"fr":"Foc",					"es":"Foque"					},
+		"JIB"		: { "actualId":"Jib",		"en":"Jib",					"fr":"Foc",					"es":"Foque"					},
+		"Spi"		: { "actualId":"Spi",		"en":"Spi",					"fr":"Spi",					"es":"Spi"						},
+		"SPI"		: { "actualId":"Spi",		"en":"Spi",					"fr":"Spi",					"es":"Spi"						},
+		"Staysail"	: { "actualId":"Staysail",	"en":"Staysail",			"fr":"Trinquette",			"es":"Trinquetilla"				},
+		"STAYSAIL"	: { "actualId":"Staysail",	"en":"Staysail",			"fr":"Trinquette",			"es":"Trinquetilla"				},
+		"LightJib"	: { "actualId":"LightJib",	"en":"Light jib",			"fr":"Génois léger",		"es":"Foque ligero"				},
+		"LIGHT_JIB"	: { "actualId":"LightJib",	"en":"Light jib",			"fr":"Génois léger",		"es":"Foque ligero"				},
+		"Code0"		: { "actualId":"Code0",		"en":"Code 0",				"fr":"Code 0",				"es":"Código 0"					},
+		"CODE_0"	: { "actualId":"Code0",		"en":"Code 0",				"fr":"Code 0",				"es":"Código 0"					},
+		"HeavyGnk"	: { "actualId":"HeavyGnk",	"en":"Heavy Gennaker",		"fr":"Spi lourd",			"es":"Gennaker pesado"			},
+		"HEAVY_GNK"	: { "actualId":"HeavyGnk",	"en":"Heavy Gennaker",		"fr":"Spi lourd",			"es":"Gennaker pesado"			},
+		"LightGnk"	: { "actualId":"LightGnk",	"en":"Light Gennaker",		"fr":"Spi léger",			"es":"Gennaker ligero"			},
+		"LIGHT_GNK"	: { "actualId":"LightGnk",	"en":"Light Gennaker",		"fr":"Spi léger",			"es":"Gennaker ligero"			}
 	};
 	var _optionsNames = {
 		"light"		: { "en":"Light wind sails",	"fr":"Voiles petit temps",	"es":"Velas para viento suave"	},
@@ -48,6 +48,9 @@ var PolarsReader = (function() {
 				dataType: "json",
 				url		: "data/boats/" + boatType + ".json",
 				success	: function(data){
+					$.map(data.sail, function(sail) {
+						sail.name = PolarsReader.sailsNames[sail.name].actualId;
+					});
 					_typesRetrieved[boatType] = _polars = data;
 				},
 				error	: function(xhr, status, err){

@@ -17,7 +17,7 @@ $(function() {
 //=================================//
 
 var Generator = (function(){
-	var _version		= "2.3.5";
+	var _version		= "2.3.6";
 	var _bInitialized	= false;
 	var _bError			= false;
 	var _bShowAsArray	= true;
@@ -94,6 +94,10 @@ var Generator = (function(){
 			else {
 				throw new EvalError("Cannot parse input message; unknown JSON object");
 			}
+
+			$.map(_polars.sail, function(sail) {
+				sail.name = PolarsReader.sailsNames[sail.name].actualId;
+			});
 
 			buildSailsList();
 			buildOptionsList();
