@@ -54,7 +54,7 @@ footer a {color:#8c8cb8; text-decoration:underline;}
 
 
 /**** CONTENT *******/
-article							{width:800px; cursor:default;}
+article							{width:850px; cursor:default;}
 article.grid2cols				{display:grid; grid-template-columns:1fr 600px; grid-gap:7px;}
 article.grid3cols				{display:grid; grid-template-columns:1fr 425px 1fr; grid-gap:7px;}
 
@@ -65,7 +65,7 @@ article .sidebox.grid1cols				{display:grid; grid-gap:2px; grid-template-columns
 article .sidebox.grid2cols				{display:grid; grid-gap:2px 10px;grid-template-columns:60px 1fr;		}
 article .sidebox.grid2cols.c20x1fr		{display:grid; grid-gap:2px; grid-template-columns:20px 1fr;			}
 article .sidebox.grid3cols				{display:grid; grid-gap:2px; grid-template-columns:20px 1fr 20px;		}
-article .sidebox.grid3cols.c20x1frx35	{display:grid; grid-gap:2px; grid-template-columns:20px 1fr 35px;		}
+article .sidebox.grid3cols.c20x1frx85	{display:grid; grid-gap:2px; grid-template-columns:20px 1fr 85px;		}
 article .sidebox.grid5cols				{display:grid; grid-gap:2px; grid-template-columns:1fr 1fr 1fr 1fr 1fr;	}
 article .sidebox			> .title	{color:#999; width:95%; margin:0 auto 1px; padding-bottom:3px; border-bottom:1px solid #bbb; position:relative;}
 article .sidebox.grid1cols	> .title	{grid-column:span 1;}
@@ -75,7 +75,7 @@ article .sidebox.grid5cols	> .title	{grid-column:span 5;}
 article .sidebox.grid1cols	> .sep		{grid-column:span 1;}
 article .sidebox.grid2cols	> .sep		{grid-column:span 2;}
 article .sidebox.grid5cols	> .sep		{grid-column:span 5;}
-article .sidebox.grid5cols	> input		{grid-column:span 3; text-align:center; vertical-align:middle; height:18px; border:1px solid #999; padding:0;}
+article .sidebox.grid5cols	> input		{grid-column:span 2; text-align:center; vertical-align:middle; height:18px; border:1px solid #999; padding:0;}
 article .sidebox.grid5cols	> button	{width:35px; height:20px;}
 article .sidebox.grid1cols	> .column1	{text-align:center;	}
 article .sidebox.grid2cols	> .column1	{text-align:right;	}
