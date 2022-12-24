@@ -48,6 +48,7 @@ var PolarsApp = (function(){
 		}
 	};
 	var _acceptedURLParams	= ["race_id", "twa", "tws", "light", "reach", "heavy", "foil", "hull", "utm_source"];
+	const sailTolerance = 1.014 ;  //  "autoSailChangeTolerance" in polar json, the same for all boats.
 
 
 	//Static Data retrieved from Server
@@ -1090,13 +1091,13 @@ var PolarsApp = (function(){
 			$("#data_twa_down"		 ).text(_twa_down			);
 			$("#data_vmg_down"		 ).text(_vmg_down			);
 
-			$(".sail.Jib"		).next().next().text(data.sailsSpeeds.Jib		.fix(2, true));
-			$(".sail.LightJib"	).next().next().text(data.sailsSpeeds.LightJib	.fix(2, true));
-			$(".sail.Staysail"	).next().next().text(data.sailsSpeeds.Staysail	.fix(2, true));
-			$(".sail.Code0"		).next().next().text(data.sailsSpeeds.Code0		.fix(2, true));
-			$(".sail.Spi"		).next().next().text(data.sailsSpeeds.Spi		.fix(2, true));
-			$(".sail.LightGnk"	).next().next().text(data.sailsSpeeds.LightGnk	.fix(2, true));
-			$(".sail.HeavyGnk"	).next().next().text(data.sailsSpeeds.HeavyGnk	.fix(2, true));
+			$(".sail.Jib"		).next().next().text(data.sailsSpeeds.Jib		.fix(3, true) + ( (					  (data.sailsSpeeds.Jib      * sailTolerance > _current_boatspeed) && (data.sailsSpeeds.Jib      !=_current_boatspeed)) ? (' (' +_current_boatspeed.fix(3, true) + ')' ) : "")  )  ;
+			$(".sail.LightJib"	).next().next().text(data.sailsSpeeds.LightJib	.fix(3, true) + ( ( _chk_opt_light && (data.sailsSpeeds.LightJib * sailTolerance > _current_boatspeed) && (data.sailsSpeeds.LightJib !=_current_boatspeed)) ? (' (' +_current_boatspeed.fix(3, true) + ')' ) : "")  )  ;
+			$(".sail.Staysail"	).next().next().text(data.sailsSpeeds.Staysail	.fix(3, true) + ( ( _chk_opt_heavy && (data.sailsSpeeds.Staysail * sailTolerance > _current_boatspeed) && (data.sailsSpeeds.Staysail !=_current_boatspeed)) ? (' (' +_current_boatspeed.fix(3, true) + ')' ) : "")  )  ;
+			$(".sail.Code0"		).next().next().text(data.sailsSpeeds.Code0		.fix(3, true) + ( ( _chk_opt_reach && (data.sailsSpeeds.Code0	 * sailTolerance > _current_boatspeed) && (data.sailsSpeeds.Code0    !=_current_boatspeed)) ? (' (' +_current_boatspeed.fix(3, true) + ')' ) : "")  )  ;
+			$(".sail.Spi"		).next().next().text(data.sailsSpeeds.Spi		.fix(3, true) + ( (					  (data.sailsSpeeds.Spi	 	 * sailTolerance > _current_boatspeed) && (data.sailsSpeeds.Spi	     !=_current_boatspeed)) ? (' (' +_current_boatspeed.fix(3, true) + ')' ) : "")  )  ;
+			$(".sail.LightGnk"	).next().next().text(data.sailsSpeeds.LightGnk	.fix(3, true) + ( ( _chk_opt_light && (data.sailsSpeeds.LightGnk * sailTolerance > _current_boatspeed) && (data.sailsSpeeds.LightGnk !=_current_boatspeed)) ? (' (' +_current_boatspeed.fix(3, true) + ')' ) : "")  )  ;
+			$(".sail.HeavyGnk"	).next().next().text(data.sailsSpeeds.HeavyGnk	.fix(3, true) + ( ( _chk_opt_heavy && (data.sailsSpeeds.HeavyGnk * sailTolerance > _current_boatspeed) && (data.sailsSpeeds.HeavyGnk !=_current_boatspeed)) ? (' (' +_current_boatspeed.fix(3, true) + ')' ) : "")  )  ;
 
 			$(".sail").removeClass("selected");
 			if (data.current.bestSail)
