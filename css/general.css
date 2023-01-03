@@ -76,7 +76,7 @@ article .sidebox.grid5cols	> .title	{grid-column:span 5;}
 article .sidebox.grid1cols	> .sep		{grid-column:span 1;}
 article .sidebox.grid2cols	> .sep		{grid-column:span 2;}
 article .sidebox.grid5cols	> .sep		{grid-column:span 5;}
-article .sidebox.grid5cols	> input		{grid-column:span 2; text-align:center; vertical-align:middle; height:18px; border:1px solid #999; padding:0;}
+article .sidebox.grid5cols	> input		{grid-column:span 3; text-align:center; vertical-align:middle; height:18px; border:1px solid #999; padding:0; width:calc(100% - 2px);}
 article .sidebox.grid5cols	> button	{width:35px; height:20px;}
 article .sidebox.grid1cols	> .column1	{text-align:center;	}
 article .sidebox.grid2cols	> .column1	{text-align:right;	}
