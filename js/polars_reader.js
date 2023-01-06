@@ -68,7 +68,8 @@ var PolarsReader = (function() {
 
 		return {
 			best		: theoreticalSpeed(twa, tws, options),
-			all			: allSailsSpeeds(twa, tws, options)
+			all			: allSailsSpeeds(twa, tws, options),
+			autoSailChangeTolerance : _polars.autoSailChangeTolerance
 		};
 	}
 	function getFoilRange() {
@@ -264,7 +265,8 @@ var PolarsReader = (function() {
 	//		},
 	//		all	: [
 	//			<String#SailId> : <Number>
-	//		]
+	//		],
+	//		autoSailChangeTolerance : <Number>
 	//	}
 	//
 	// * PolarsReader.getFoilRange()
