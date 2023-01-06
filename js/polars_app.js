@@ -49,7 +49,6 @@ var PolarsApp = (function(){
 	};
 	var _acceptedURLParams	= ["race_id", "twa", "tws", "light", "reach", "heavy", "foil", "hull", "utm_source"];
 
-
 	//Static Data retrieved from Server
 	var _races				= {};
 	var _boats				= {};
@@ -1075,6 +1074,7 @@ var PolarsApp = (function(){
 			_vmg_up				= data.bestVMG.upwind.vmg;
 			_twa_down			= data.bestVMG.downwind.twa;
 			_vmg_down			= data.bestVMG.downwind.vmg;
+			_autoSailChangeTolerance = data.autoSailChangeTolerance;
 
 
 			$("#data_twa .val"		 ).text(_current_twa		);
@@ -1090,14 +1090,21 @@ var PolarsApp = (function(){
 			$("#data_twa_down"		 ).text(_twa_down			);
 			$("#data_vmg_down"		 ).text(_vmg_down			);
 
-			$(".sail.Jib"		).next().next().text(data.sailsSpeeds.Jib		.fix(2, true));
-			$(".sail.LightJib"	).next().next().text(data.sailsSpeeds.LightJib	.fix(2, true));
-			$(".sail.Staysail"	).next().next().text(data.sailsSpeeds.Staysail	.fix(2, true));
-			$(".sail.Code0"		).next().next().text(data.sailsSpeeds.Code0		.fix(2, true));
-			$(".sail.Spi"		).next().next().text(data.sailsSpeeds.Spi		.fix(2, true));
-			$(".sail.LightGnk"	).next().next().text(data.sailsSpeeds.LightGnk	.fix(2, true));
-			$(".sail.HeavyGnk"	).next().next().text(data.sailsSpeeds.HeavyGnk	.fix(2, true));
-
+			for (var sail in data.sailsSpeeds) {
+				$(".sail." + sail ).next().next().text(data.sailsSpeeds[sail]	.fix(3, true));
+				if  (  (   ( ( (sail == "LightJib") || (sail == "LightGnk")) && _chk_opt_light ) 
+					    || ( ( (sail == "Staysail") || (sail == "HeavyGnk")) && _chk_opt_heavy )
+						|| (   (sail == "Code0")                             && _chk_opt_reach )
+						||     (sail == "Jib") 
+						||     (sail == "Spi") )
+					  && ( (data.sailsSpeeds[sail] * _autoSailChangeTolerance) > _current_boatspeed) 
+					  && ( sail != data.current.bestSail ) 
+					) {
+					$(".sail." + sail ).next().next().append(' <b>(B)<b>');
+					$(".sail." + sail ).next().next().attr("title", "En voile automatique, boost coef " + ((_current_boatspeed /data.sailsSpeeds[sail]).fix(4, true)) + " (peut profiter de la vitesse de la meilleure voile)" ) ;
+				}
+			}	
+			
 			$(".sail").removeClass("selected");
 			if (data.current.bestSail)
 				$(".sail." + data.current.bestSail).addClass("selected");

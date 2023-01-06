@@ -88,7 +88,8 @@ var PolarsChart = (function(){
 					__boatType	: "",
 					__options	: []
 				},
-				sailsSpeeds : null
+				sailsSpeeds : null,
+				autoSailChangeTolerance : 0,
 			};
 			_maxFoilFactor = 1;
 
@@ -116,6 +117,8 @@ var PolarsChart = (function(){
 					_maxFoilFactor = _polarsData[i].best.foilFactor;
 				}
 			}
+			_currentResultset.autoSailChangeTolerance =  _polarsData[0].autoSailChangeTolerance;
+
 		}
 		else {
 			_currentResultset.current = {
@@ -646,7 +649,8 @@ var PolarsChart = (function(){
 	//		},
 	//		sailsSpeeds	: [
 	//			<String#SailId> : <Number>
-	//		]
+	//		],
+	//		autoSailChangeTolerance : <Number>
 	//	}
 	//---------------------------------
 
