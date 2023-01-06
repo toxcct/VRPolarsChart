@@ -1077,18 +1077,18 @@ var PolarsApp = (function(){
 			_vmg_down			= data.bestVMG.downwind.vmg;
 
 
-			$("#data_twa .val"		 ).text(_current_twa		);
-			$("#data_boat_speed .val").text(_current_boatspeed	);
-			$("#data_vmg .val"		 ).text(_current_vmg		);
-			$("#data_tws"			 ).val (_current_tws		);
-			$("#foils_factor"		 ).text(_foils_factor		);
-			$("#foils_rate"			 ).text(_foils_rate			);
-			$("#data_maxsp_twa"		 ).text(_maxsp_twa			);
-			$("#data_maxsp_bs"		 ).text(_maxsp_bs			);
-			$("#data_twa_up"		 ).text(_twa_up				);
-			$("#data_vmg_up"		 ).text(_vmg_up				);
-			$("#data_twa_down"		 ).text(_twa_down			);
-			$("#data_vmg_down"		 ).text(_vmg_down			);
+			$("#data_twa .val"		 ).text(_current_twa			);
+			$("#data_boat_speed .val").text(_current_boatspeed		);
+			$("#data_vmg .val"		 ).text(_current_vmg.toFixed(4)	);
+			$("#data_tws"			 ).val (_current_tws			);
+			$("#foils_factor"		 ).text(_foils_factor			);
+			$("#foils_rate"			 ).text(_foils_rate				);
+			$("#data_maxsp_twa"		 ).text(_maxsp_twa				);
+			$("#data_maxsp_bs"		 ).text(_maxsp_bs				);
+			$("#data_twa_up"		 ).text(_twa_up					);
+			$("#data_vmg_up"		 ).text(_vmg_up.toFixed(4)		);
+			$("#data_twa_down"		 ).text(_twa_down				);
+			$("#data_vmg_down"		 ).text(_vmg_down.toFixed(4)	);
 
 			$(".sail.Jib"		).next().next().text(data.sailsSpeeds.Jib		.fix(2, true));
 			$(".sail.LightJib"	).next().next().text(data.sailsSpeeds.LightJib	.fix(2, true));
