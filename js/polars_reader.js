@@ -91,7 +91,7 @@ var PolarsReader = (function() {
 
 		return {
 			speed		: roundTo(totalSpeed, 3),
-			vmg			: roundTo(totalSpeed * Math.cos(twa * Math.PI/180), 3),
+			vmg			: totalSpeed * Math.cos(twa * Math.PI/180),
 			sail		: speed.sail,
 			foilFactor	: roundTo(foilFactor, 3),
 			foilRate	: roundTo(foilRate, 1)
